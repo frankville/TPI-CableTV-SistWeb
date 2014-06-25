@@ -7,26 +7,17 @@
     <meta name="description" content="">
     <meta name="author" content="Villasanti Francisco">
 
-    <title>Lancaster Dashboard</title>
+    <title>Sistema CableTV</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-   <!-- <link href='http://fonts.googleapis.com/css?family=Fondamento' rel='stylesheet' type='text/css'> -->
-    <!--<link rel="stylesheet" href="http://getbootstrap.com/examples/sticky-footer/sticky-footer.css"> -->
-    <!-- Custom styles for this template -->
+
     <link href="signin.css" rel="stylesheet">
     <link href="stickyfooter.css" rel="stylesheet">
     <link href="dashboard.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="offcanvas.css">
+    <link rel="stylesheet" type="text/css" href="sistema.css">
 
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
 
   <body>
@@ -39,13 +30,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Sistema Web Cable-TV</a>
+          <a class="navbar-brand" href="#">Cable-TV</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul id="navbarUsuario" class="nav navbar-nav navbar-right collapse">
                 
                 <li>
-                  <a id="currUser"><img id="imgUsuario" class="img-responsive" src="LogoLancaster.png"> Lancaster</a>
+                 <!-- <a id="currUser"><img id="imgUsuario" class="img-responsive" src="LogoLancaster.png"> Lancaster</a> -->
              </li>
                 <li><a id="dologout" href="#">Salir</a></li>
           </ul>
@@ -55,7 +46,7 @@
     <div id="marco" class="container">
 
       <div id="encab" class="container">
-          <!--<h1 id="nombre"><strong>Sistema Web Cable-TV</strong></h1> -->
+          <h1 id="nombre"><strong>Sistema de Administración Web Cable-TV</strong></h1>
           <!-- <img id="logo" src="LogoLancaster.png" class="img-responsive"> -->
 
        <!--  <h4 id="subtitulo">Institute of English</h4> -->
@@ -66,7 +57,6 @@
       	 <img id="spin" src="loaderbar.gif">
       </div>
 			
-
           <form id="formulario" class="form-signin form-horizontal" role="form">
             <!-- h4 class="form-signin-heading">Ingresa tus credenciales</h4> -->
             <input id="usuario" class="form-control" placeholder="tu nombre de usuario" required autofocus>
@@ -129,46 +119,129 @@
           <p class="pull-left visible-xs">
             <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Menu</button>
           </p>
+          <div id="arpan" class="col-xs-10 col-sm-10  panel panel-default">
+            <div class="panel-heading">
+              <h1 class="panel-title">Atencion Reclamos</h1>
+            </div>
+            <div class="panel-body">
+              <form id="arform"  class="form-horizontal" role="form">
 
+              <div class="row">
+                <div class="form-group col-xs-6">
+                 <label for="arncli">Nro Cliente</label>
+                 <div class="input-group">
+                  <input id="arncli"  class="form-control" type="number">
+                 <span class=" input-group-btn">
+                   <button id="arnclisearch" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                 </span>
 
-          <div id="ctrlResumenIngreso" class="col-xs-12 col-sm-9 container collapse">
-
-           <form id="formResumenIngresos" class="col-xs-12 col-sm-12 form-inline" role="form">
-              <div class="form-group form-inline">
-                <label for="mesInput">Mes de consulta</label>
-                 <input type="month"  class="form-control" id="mesInput">
-             </div>
-                 <button type="submit" class="btn btn-primary btn-default">Listo</button>
-          </form>
-
-          </div>
-
-          <div id="ctrlDetalleIngreso" class="col-xs-12 col-sm-9 container collapse">
-
-            <form class="col-xs-12 col-sm-12 form-inline" role="form">
-                <div class="form-group form-inline">
-                  <label for="mesInput">Fecha de la consulta</label>
-                  <input type="datetime-local" name ="mesInput" class="form-control" id="mesInput">
+                   
+                 </div>
                 </div>
-                <button type="submit" class="btn btn-default">Listo</button>
+                <div class="form-group col-xs-6">
+                  <label for="ardnitit">DNI Titular</label>
+                  <div class="input-group">
+                  <input id="ardnitit"  class="form-control" type="number">
+                 <span class=" input-group-btn">
+                   <button id="ardnititsearch" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                 </span>
+                   
+                 </div>
+                </div>
+              </div>
+              <div class="row">
+              <div class="form-group col-xs-12">
+                 <label for="arapynom">Apellido y Nombre</label>
+                  <input id="arapynom" class="form-control">               
+              </div>
+              </div>
+              <div class="row">
+              <div class="form-group col-xs-12">
+                <label for="ardir">Direccion</label>
+                <input id="ardir" class="form-control" type="address">                
+              </div>
+              </div>
+              <div class="row">
+              <div class="form-group col-xs-6">      
+                <label for="arestcta">Estado de cuenta</label>
+                <input id="arestcta" class="form-control" >
+              </div>
+
+              <div class="form-group col-xs-6">      
+                <label for="arestcnx">Estado de conexión</label>
+                <input id="arestcnx" class="form-control" >
+              </div>
+              </div>
+              <div class="row">
+                <button id="arregrec" class="form-control col-xs-4 botform" type="submit">Registrar Reclamo</button>
+
+              </div>
             </form>
+            </div>
+          </div>
+          <!-- panel registro reclamo -->
+          <div id="regrecpan" class="col-xs-10 panel panel-default" >
+            <div class="panel-heading">
+              <h1>Registrar un reclamo</h1>
+            </div>
+            <div class="panel-body">
+              <form id="regrecform" class="form form-horizontal" role="form">
+                <div >
+                <div class="row">
+                  <div class="form-group col-xs-6">
+                    <label for="arncli">Nro Cliente</label>
+                    <div class="input-group">
+                      <input id="arncli"  class="form-control" type="number">
+                      <span class=" input-group-btn">
+                        <button id="arnclisearch" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  
+                </div>
+
+                <div class="row">
+                  
+                </div>
+
+                <div class="row">
+                  
+                </div>
+
+                <div class="row">
+                  
+                </div>
+
+                <div class="row">
+                  
+                </div>
+
+                <div class="row">
+                  
+                </div>
+
+                <div class="row">
+                  
+                </div>
+
+                <div class="row">
+                  
+                </div>
+
+
+                  <div class="form-group">
+                    <label for=""></label>
+                    <input type="" class="form-control" >
+                  </div>
+                </div>
+            
+              </form>  
+            </div>
 
           </div>
-
-
-          <div id="ctrlListaAlu" class="col-xs-12 col-sm-12 container collapse">
-
-            <form id="formListaAlu" class="form-inline" role="form">
-                <h4>Alumnos activos</h4>
-                  <label for="fechaInput">Fecha de la consulta</label>
-                  <input type="date" class="form-control unInput" id="fechaInput">
-                <button type="submit" class="btn btn-lg btn-primary">Listo</button>
-            </form>
-            <div id="loaderDiv"><p>Un momento, generando el reporte...<img src="loaderbar.gif"></p></div>
-          </div>
-
-
-
 
           <div id="contenido" class="col-xs-12 col-sm-12 container">
 
@@ -190,7 +263,7 @@
     
     <div id="footer">
       <div class="container">
-        <p class="text-muted text-center"><strong> &copy WorkCloud Systems.</strong> All rights reserved</p>
+        <p class="text-muted text-center"><strong> &copy CableTV.</strong> Derechos reservados</p>
       </div>
     </div>
 
@@ -201,12 +274,7 @@
     <script src="jquery-1.11.0.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script> 
     <script src="offcanvas.js"></script>
-    <script src="iniciosesion.js"></script>
-    <script src="login.js"></script>
-    <script src="carga.js"></script>
-    <script src="dashboard.js"></script>
-
-
+    <script src="sistema.js"></script>
 
   </body>
 </html>
