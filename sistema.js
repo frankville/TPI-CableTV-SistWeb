@@ -63,6 +63,6 @@ $(document).ready(function(){
 			$("#regrecpan").fadeIn("fast");
 		})
 	});
-
+	
 });
 
