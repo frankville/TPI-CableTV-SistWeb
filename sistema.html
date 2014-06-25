@@ -77,18 +77,47 @@
 
              <ul id="menuPpal" class="nav nav-pills nav-stacked">
             <li class="active"><a >Home</a></li>
-             <li><a id="mreclamos" href="" >Reclamos</a></li> 
-            <!-- <li><a >Contratación de Servicios</a></li> -->
-            <li><a >Área Técnica</a></li> 
             <li>
               <a data-toggle="collapse" data-parent="#menuPpal" href="#ingresoSubmenu">
-               Contratación de Servicios <span class="caret"></span>
+               Reclamos <span class="caret"></span>
                </a>
                <div id="ingresoSubmenu" class="panel-collapse collapse in">
                   <div class="panel-body">
                       <ul  class="nav nav-pills nav-stacked" >
+                      <li id="mreclamos"><a href="#"> Reclamos</a></li>
+                      <li id="mlistrec"><a href="#"> Reclamos online</a></li>
+                      <!--<li id="mservadic" ><a href="#">Servicios Adicionales</a></li> -->
+                      </ul>
+                  </div>
+                </div>
+            </li>
+             
+            <!-- <li><a >Contratación de Servicios</a></li> -->
+            <li>
+              <a data-toggle="collapse" data-parent="#menuPpal" href="#atsubmenu">
+               Área Técnica <span class="caret"></span>
+               </a>
+               <div id="atsubmenu" class="panel-collapse collapse in">
+                  <div class="panel-body">
+                      <ul  class="nav nav-pills nav-stacked" >
+                      <li id="atmap"><a href="#"> Mapa</a></li>
+                      <li id="atreghr"><a href="#">Nueva Hoja de Ruta</a></li>
+                      <li id="athojaruta"><a href="#"> Listado Hoja de Ruta</a></li>
+                      <!--<li id="mservadic" ><a href="#">Servicios Adicionales</a></li> -->
+                      </ul>
+                  </div>
+                </div>
+            </li> 
+            <li>
+              <a data-toggle="collapse" data-parent="#menuPpal" href="#cssubmenu">
+               Contratación de Servicios <span class="caret"></span>
+               </a>
+               <div id="cssubmenu" class="panel-collapse collapse in">
+                  <div class="panel-body">
+                      <ul  class="nav nav-pills nav-stacked" >
                       <li id="mservbasico"><a href="#"> Servicio Básico</a></li>
-                      <li id="mservadic" ><a href="#">Servicios Adicionales</a></li>
+
+                      <!--<li id="mservadic" ><a href="#">Servicios Adicionales</a></li> -->
                       </ul>
                   </div>
                 </div>
@@ -127,9 +156,9 @@
               <form id="arform"  class="form-horizontal" role="form">
 
               <div class="row">
-                <div class="form-group col-xs-6">
-                 <label for="arncli">Nro Cliente</label>
-                 <div class="input-group">
+              <div class="form-group col-xs-6">      
+                <label for="arncli">Nro Cliente</label>
+                <div class="input-group">
                   <input id="arncli"  class="form-control" type="number">
                  <span class=" input-group-btn">
                    <button id="arnclisearch" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
@@ -137,17 +166,20 @@
 
                    
                  </div>
-                </div>
-                <div class="form-group col-xs-6">
-                  <label for="ardnitit">DNI Titular</label>
-                  <div class="input-group">
+                <!--<input id="arestcnx" class="form-control" > -->
+              </div>
+              <div class="form-group col-xs-6">      
+                <label for="ardnitit">DNI Titular</label>
+                <div class="input-group">
                   <input id="ardnitit"  class="form-control" type="number">
                  <span class=" input-group-btn">
-                   <button id="ardnititsearch" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                   <button id="ardnititsearch" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
                  </span>
+
                    
                  </div>
-                </div>
+                <!--<input id="arestcnx" class="form-control" > -->
+              </div>
               </div>
               <div class="row">
               <div class="form-group col-xs-12">
@@ -169,11 +201,19 @@
 
               <div class="form-group col-xs-6">      
                 <label for="arestcnx">Estado de conexión</label>
-                <input id="arestcnx" class="form-control" >
+                <div class="input-group">
+                  <input id="arestcnx"  class="form-control" type="number">
+                 <span class=" input-group-btn">
+                   <button id="arestcnxsearch" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                 </span>
+
+                   
+                 </div>
+                <!--<input id="arestcnx" class="form-control" > -->
               </div>
               </div>
               <div class="row">
-                <button id="arregrec" class="form-control col-xs-4 botform" type="submit">Registrar Reclamo</button>
+                <button id="arregrec" class="form-control col-xs-4 botform btn btn-primary btn-lg btn-block" type="submit">Registrar Reclamo</button>
 
               </div>
             </form>
@@ -189,68 +229,601 @@
                 <div >
                 <div class="row">
                   <div class="form-group col-xs-6">
-                    <label for="arncli">Nro Cliente</label>
-                    <div class="input-group">
-                      <input id="arncli"  class="form-control" type="number">
-                      <span class=" input-group-btn">
-                        <button id="arnclisearch" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
-                      </span>
-                    </div>
+                    <label for="rrncli">Nro Cliente</label>
+                      <input id="rrncli"  class="form-control" type="number">
                   </div>
                 </div>
 
                 <div class="row">
+                   <div class="form-group col-xs-12">
+                     <label for="rrapynom">Apellido y Nombre</label>
+                    <input id="rrapynom" class="form-control">               
+                   </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group col-xs-9">
+                   <label for="rrcalle">Calle</label>
+                   <input id="rrcalle" class="form-control">               
+                 </div>
+                 <div class="form-group col-xs-3">
+                   <label for="rraltura">Altura</label>
+                   <input id="rraltura" class="form-control">               
+                 </div>
+                </div>
+
+                <div class="row">
+                <div class="form-group col-xs-4">
+                   <label for="rrbarrio">Barrio</label>
+                   <input id="rrbarrio" class="form-control">               
+                 </div>
+                 <div class="form-group col-xs-2">
+                   <label for="rrmz">Mz</label>
+                   <input id="rrmz" class="form-control">               
+                 </div>
+                 <div class="form-group col-xs-2">
+                   <label for="rrpc">Pc</label>
+                   <input id="rrpc" class="form-control">               
+                 </div>
+                 <div class="form-group col-xs-2">
+                   <label for="rrcs">Cs</label>
+                   <input id="rrcs" class="form-control">               
+                 </div>
+                 <div class="form-group col-xs-2">
+                   <label for="rrpiso">Piso</label>
+                   <input id="rrpiso" class="form-control">               
+                 </div>
+                 <div class="form-group col-xs-2">
+                   <label for="rrdpto">Dpto</label>
+                   <input id="rrdpto" class="form-control">               
+                 </div>
                   
                 </div>
 
                 <div class="row">
-                  
-                </div>
-
-                <div class="row">
-                  
-                </div>
-
-                <div class="row">
-                  
-                </div>
-
-                <div class="row">
-                  
-                </div>
-
-                <div class="row">
-                  
-                </div>
-
-                <div class="row">
-                  
-                </div>
-
-                <div class="row">
-                  
-                </div>
-
-
-                  <div class="form-group">
-                    <label for=""></label>
-                    <input type="" class="form-control" >
+                  <div class="form-group col-xs-5">
+                   <label for="rrloc">Localidad</label>
+                   <input id="rrloc" class="form-control">               
                   </div>
+                  <div class="form-group col-xs-5">
+                   <label for="rrzona">Zona</label>
+                   <input id="rrzona" class="form-control">               
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group col-xs-5">
+                   <label for="rrtelf">Tel fijo</label>
+                   <input id="rrtelf" class="form-control">               
+                  </div>
+                  <div class="form-group col-xs-5">
+                   <label for="rrtelc">Celular</label>
+                   <input id="rrtelc" class="form-control">               
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group col-xs-5">
+                   <label for="rrfechrec">Fecha Reclamo</label>
+                   <input id="rrfechrec" type="date" class="form-control">               
+                  </div>
+                  <div class="form-group col-xs-5">
+                   <label for="rrhorarec">Hora Reclamo</label>
+                   <input id="rrhorarec" type="time" class="form-control">               
+                  </div>
+                  
+                </div>
+
+                <div class="row">
+                  <div class="form-group col-xs-5">
+                   <label for="rrfechinic">Inicio del problema</label>
+                   <input id="rrfechinic" type="date" class="form-control">               
+                  </div>
+
+                <div class="form-group col-xs-6">      
+                  <label for="rrestcnx">Estado de conexión</label>
+                  <div class="input-group">
+                    <input id="rrestcnx"  class="form-control" type="number">
+                     <span class=" input-group-btn">
+                       <button id="arestcnxsearch" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                    </span> 
+                  </div>
+                <!--<input id="arestcnx" class="form-control" > -->
+                </div>
+                </div>
+
+                <div class="row">
+                  <button id="arregrec" class="form-control col-xs-4 botform btn btn-primary btn-lg btn-block" type="submit">Confirmar</button>
+                </div>
+
                 </div>
             
               </form>  
             </div>
 
           </div>
+          <div id="sbpan" class="col-xs-10 panel panel-default" >
+            <div class="panel-heading">
+              <h1>Contratar el servicio</h1>
+            </div>
+            <div class="panel-body">
+              <form id="sbform" class="form form-horizontal" role="form">
+                <div >
 
+                <div class="row">
+                   <div class="form-group col-xs-5">
+                     <label for="sbap">Apellido</label>
+                    <input id="sbap" class="form-control">               
+                   </div>
+                  <div class="form-group col-xs-5">
+                     <label for="sbnom">Nombre</label>
+                    <input id="sbnom" class="form-control">               
+                   </div>
+                </div>
+                <hr>
+                <h6>Dirección</h6>
+                <div class="row">
+                  <div class="form-group col-xs-9">
+                   <label for="sbcalle">Calle</label>
+                   <input id="sbcalle" class="form-control">               
+                 </div>
+                 <div class="form-group col-xs-3">
+                   <label for="sbaltura">Altura</label>
+                   <input id="sbaltura" class="form-control">               
+                 </div>
+                </div>
+
+                <div class="row">
+                <div class="form-group col-xs-4">
+                   <label for="sbbarrio">Barrio</label>
+                   <input id="sbbarrio" class="form-control">               
+                 </div>
+                 <div class="form-group col-xs-2">
+                   <label for="sbmz">Mz</label>
+                   <input id="sbmz" class="form-control">               
+                 </div>
+                 <div class="form-group col-xs-2">
+                   <label for="sbpc">Pc</label>
+                   <input id="sbpc" class="form-control">               
+                 </div>
+                 <div class="form-group col-xs-2">
+                   <label for="sbcs">Cs</label>
+                   <input id="sbcs" class="form-control">               
+                 </div>
+                 <div class="form-group col-xs-2">
+                   <label for="sbpiso">Piso</label>
+                   <input id="sbpiso" class="form-control">               
+                 </div>
+                 <div class="form-group col-xs-2">
+                   <label for="sbdpto">Dpto</label>
+                   <input id="sbdpto" class="form-control">               
+                 </div>
+                  
+                </div>
+
+                <div class="row">
+                  <div class="form-group col-xs-5">
+                   <label for="sbloc">Localidad</label>
+                   <input id="sbloc" class="form-control">               
+                  </div>
+                  <div class="form-group col-xs-5">
+                   <label for="sbzona">Zona</label>
+                   <input id="sbzona" class="form-control">               
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group col-xs-5">
+                   <label for="sbtelf">Tel fijo</label>
+                   <input id="sbtelf" class="form-control">               
+                  </div>
+                  <div class="form-group col-xs-5">
+                   <label for="sbtelc">Celular</label>
+                   <input id="sbtelc" class="form-control">               
+                  </div>
+                </div>
+                <hr>
+
+                <div class="row">
+                  <div class="form-group col-xs-5">
+                   <label for="sbserv">Servicio a Contratar</label>
+                   <select id="sbserv" class="form-control">
+                      <option>Estándar</option>
+                      <option>Plus</option>
+                      <option>Premium</option>
+                   </select>            
+                  </div>
+                  <div class="form-group col-xs-5">
+                   <label for="sbfechinst">Fecha Instalación</label>
+                   <input id="sbfechinst" type="date" class="form-control">               
+                  </div>
+                  
+                </div>
+
+                <div class="row">
+                  <div class="form-group col-xs-5">
+                   <label for="sbfp">Forma de Pago</label>
+                   <select id="sbfp" class="form-control">
+                      <option>Efectivo</option>
+                      <option>Tarjeta crédito</option>
+                      <option>Tarjeta débito</option>
+                   </select>            
+                  </div>
+                </div>
+
+                <div class="row">
+                  <button id="arregrec" class="form-control col-xs-4 botform btn btn-primary btn-lg btn-block" type="submit">Confirmar</button>
+                </div>
+
+                </div>
+            
+              </form>  
+            </div>
+
+          </div>
+          <div id="lrpan" class="col-xs-10 panel panel-default" >
+            <div class="panel-heading">
+              <h1>Reclamos online</h1>
+            </div>
+            <div class="panel-body">
+                <div class="table-responsive paneles">
+
+                  <table id="lista" class="table-responsive">
+                    <thead style="text-align: center">
+                      <tr>
+                        <th style="width:5em ; text-align: center">ID Reclamo</th>
+                        <th style="width:30em ;  text-align: center">Fecha</th>
+                        <th style="width:30em ;  text-align: center">Hora</th>
+                        <th style="width:30em ;  text-align: center">Nro Cliente</th>
+                        <th style="width:30em ;  text-align: center">Descripción</th>
+                        <th style="width:30em ;  text-align: center">Enviar Email</th>
+                        <th style="width:30em ;  text-align: center">Cambiar Estado</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>7/06/2014</td>
+                        <td>18:00</td>
+                        <td>123456</td>
+                        <td>descripcion del problema 1 ....</td>
+                        <td><button class="btn btn-default">enviar email</button></td>
+                        <td><button class="btn btn-default">verificado</button></td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>8/06/2014</td>
+                        <td>18:00</td>
+                        <td>789456</td>
+                        <td>descripcion del problema 2 ....</td>
+                        <td><button class="btn btn-default">enviar email</button></td>
+                        <td><button class="btn btn-default">verificado</button></td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>7/06/2014</td>
+                        <td>18:00</td>
+                        <td>456789</td>
+                        <td>descripcion del problema 3....</td>
+                        <td><button class="btn btn-default">enviar email</button></td>
+                        <td><button class="btn btn-default">verificado</button></td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>8/06/2014</td>
+                        <td>18:00</td>
+                        <td>789456</td>
+                        <td>descripcion del problema 4 ....</td>
+                        <td><button class="btn btn-default">enviar email</button></td>
+                        <td><button class="btn btn-default">verificado</button></td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>10/06/2014</td>
+                        <td>18:00</td>
+                        <td>123789</td>
+                        <td>descripcion del problema 5 ....</td>
+                        <td><button class="btn btn-default">enviar email</button></td>
+                        <td><button class="btn btn-default">verificado</button></td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td>10/06/2014</td>
+                        <td>18:00</td>
+                        <td>321654</td>
+                        <td>descripcion del problema 6 ....</td>
+                        <td><button class="btn btn-default">enviar email</button></td>
+                        <td><button class="btn btn-default">verificado</button></td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>11/06/2014</td>
+                        <td>18:00</td>
+                        <td>131516514</td>
+                        <td>descripcion del problema 1 ....</td>
+                        <td><button class="btn btn-default">enviar email</button></td>
+                        <td><button class="btn btn-default">verificado</button></td>
+                      </tr>
+                
+                    </tbody>
+                  </table>  
+                </div>
+            </div>
+
+          </div>
+          <div id="atmappan" class="col-xs-10 panel panel-default" >
+            <div class="panel-heading">
+              <h1>Mapa de zonas y reclamos</h1>
+            </div>
+            <div class="panel-body">           
+            <div class="row">
+              <div class="col-xs-5">
+                <label for="zonacombo">Selecciona la zona</label>
+                <select class="form-control form-inline">
+                  <option>zona 1</option>
+                  <option>zona 2</option>
+                  <option>zona 3</option>
+                  <option>zona 4</option>
+                  <option>zona 5</option>
+                </select>
+              </div>
+              <div class="col-xs-4"></div>
+            </div>
+
+            <div id="map-canvas" class="col-xs-12"></div>
+            <div class="row">
+              <div class="col-xs-5">
+                <div class="alert alert-success">Conexiones Correctas: 45</div>
+              </div>
+              <div class="col-xs-5">
+
+                <div class="alert alert-info">Conexiones Pendientes: 10</div>
+              </div>
+
+            </div>
+            <div class="row">
+              <div class="col-xs-5">
+
+                <div class="alert alert-warning">Conexiones c/ problemas: 45</div>
+              </div>
+              <div class="col-xs-5">
+                <div class="alert alert-danger">Conexiones c/ corte: 10</div>
+              </div>
+
+            </div>
+            </div>
+
+          </div>
+          <div id="athrpan" class="col-xs-10 panel panel-default" >
+            <div class="panel-heading">
+              <h1>Hoja de Ruta</h1>
+            </div>
+            <div class="panel-body col-xs-12">           
+            <div class="row">
+                <div class="table-responsive paneles">
+
+                  <table id="lista" class="table table-stripped ">
+                    <thead style="text-align: center">
+                      <tr>
+                        <th style="width:5em ; text-align: center">Prioridad</th>
+                        <th style="width:30em ;  text-align: center">Estado</th>
+                        <th style="width:30em ;  text-align: center">Ap y Nom</th>
+                        <th style="width:30em ;  text-align: center">Nro Cliente</th>
+                        <th style="width:30em ;  text-align: center">Direccion</th>
+                        <th style="width:30em ;  text-align: center">Barrio</th>
+                        <th style="width:30em ;  text-align: center">Serv. Contratado</th>
+                        <th style="width:30em ;  text-align: center">Resuelto</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Alta</td>
+                        <td>Sin atender</td>
+                        <td>Cliente, 1</td>
+                        <td>123456</td>
+                        <td>direccion cliente 1</td>
+                        <td>Barrio 2</td>
+                        <td>Estandar</td>
+                        <td><input type="checkbox" name="verif" value="verificado"></td>
+                      </tr>
+                      <tr>
+                        <td>Media</td>
+                        <td>Sin atender</td>
+                        <td>Cliente, 2</td>
+                        <td>135424</td>
+                        <td>direccion cliente 2</td>
+                        <td>Barrio 3</td>
+                        <td>Plus</td>
+                        <td><input type="checkbox" name="verif" value="verificado"></td>
+                      </tr>
+                      <tr>
+                        <td>Baja</td>
+                        <td>Sin atender</td>
+                        <td>Cliente, 5</td>
+                        <td>521658</td>
+                        <td>direccion cliente 5</td>
+                        <td>Barrio 8</td>
+                        <td>Plus</td>
+                        <td><input type="checkbox" name="verif" value="verificado"></td>
+                      </tr>
+                      <tr>
+                        <td>Media</td>
+                        <td>Sin atender</td>
+                        <td>Cliente, 5</td>
+                        <td>789564</td>
+                        <td>direccion cliente 5</td>
+                        <td>Barrio 8</td>
+                        <td>Premium</td>
+                        <td><input type="checkbox" name="verif" value="verificado"></td>
+                      </tr>
+                      <tr>
+                        <td>Alta</td>
+                        <td>Sin atender</td>
+                        <td>Cliente, 10</td>
+                        <td>159753</td>
+                        <td>direccion cliente 10</td>
+                        <td>Barrio 10</td>
+                        <td>Estandar</td>
+                        <td><input type="checkbox" name="verif" value="verificado"></td>
+                      </tr>
+                      <tr>
+                        <td>Media</td>
+                        <td>Sin atender</td>
+                        <td>Cliente, 18</td>
+                        <td>852963</td>
+                        <td>direccion cliente 18</td>
+                        <td>Barrio 18</td>
+                        <td>Plus</td>
+                        <td><input type="checkbox"  name="verif" value="verificado"></td>
+                      </tr>
+                      <tr>
+                        <td>Baja</td>
+                        <td>Sin atender</td>
+                        <td>Cliente, 20</td>
+                        <td>258954</td>
+                        <td>direccion cliente 20</td>
+                        <td>Barrio 15</td>
+                        <td>Premium</td>
+                        <td><input type="checkbox" name="verif" value="verificado"></td>
+                      </tr>
+                
+                    </tbody>
+                  </table>  
+                </div>
+            </div>
+
+            <div class="row">
+            <button class="btn btn-primary col-xs 5">Actualizar Hojas de ruta</button>
+
+            </div>
+            </div>
+
+          </div>
+          <div id="atreghrpan" class="col-xs-10 panel panel-default" >
+            <div class="panel-heading">
+              <h1>Nueva Hoja de Ruta</h1>
+            </div>
+            <div class="panel-body">
+            <div class="row">
+              <form class="form form-inline" role="form">
+                <div class="form-group">
+                  <label for="athrec">Nro Reclamo</label>
+                  <input id="athrec" type="number" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="athrprio">Prioridad</label>
+                  <select id="athrprio" class="form-control">
+                    <option>Baja</option>
+                    <option>Media</option>
+                    <option>Alta</option>
+                  </select>
+                </div>    
+                <button type="submit" class="btn btn-primary">Agregar</button>  
+                </form>        
+            </div>           
+            <div class="row">
+                <div class="table-responsive paneles">
+
+                  <table id="lista" class="table table-stripped ">
+                    <thead style="text-align: center">
+                      <tr>
+                        <th style="width:5em ; text-align: center">Prioridad</th>
+                        <th style="width:30em ;  text-align: center">Estado</th>
+                        <th style="width:30em ;  text-align: center">Ap y Nom</th>
+                        <th style="width:30em ;  text-align: center">Nro Cliente</th>
+                        <th style="width:30em ;  text-align: center">Direccion</th>
+                        <th style="width:30em ;  text-align: center">Barrio</th>
+                        <th style="width:30em ;  text-align: center">Serv. Contratado</th>
+                        <th style="width:30em ;  text-align: center">Resuelto</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Alta</td>
+                        <td>Sin atender</td>
+                        <td>Cliente, 1</td>
+                        <td>123456</td>
+                        <td>direccion cliente 1</td>
+                        <td>Barrio 2</td>
+                        <td>Estandar</td>
+                        <td><input type="checkbox" name="verif" value="verificado"></td>
+                      </tr>
+                      <tr>
+                        <td>Media</td>
+                        <td>Sin atender</td>
+                        <td>Cliente, 2</td>
+                        <td>135424</td>
+                        <td>direccion cliente 2</td>
+                        <td>Barrio 3</td>
+                        <td>Plus</td>
+                        <td><input type="checkbox" name="verif" value="verificado"></td>
+                      </tr>
+                      <tr>
+                        <td>Baja</td>
+                        <td>Sin atender</td>
+                        <td>Cliente, 5</td>
+                        <td>521658</td>
+                        <td>direccion cliente 5</td>
+                        <td>Barrio 8</td>
+                        <td>Plus</td>
+                        <td><input type="checkbox" name="verif" value="verificado"></td>
+                      </tr>
+                      <tr>
+                        <td>Media</td>
+                        <td>Sin atender</td>
+                        <td>Cliente, 5</td>
+                        <td>789564</td>
+                        <td>direccion cliente 5</td>
+                        <td>Barrio 8</td>
+                        <td>Premium</td>
+                        <td><input type="checkbox" name="verif" value="verificado"></td>
+                      </tr>
+                      <tr>
+                        <td>Alta</td>
+                        <td>Sin atender</td>
+                        <td>Cliente, 10</td>
+                        <td>159753</td>
+                        <td>direccion cliente 10</td>
+                        <td>Barrio 10</td>
+                        <td>Estandar</td>
+                        <td><input type="checkbox" name="verif" value="verificado"></td>
+                      </tr>
+                      <tr>
+                        <td>Media</td>
+                        <td>Sin atender</td>
+                        <td>Cliente, 18</td>
+                        <td>852963</td>
+                        <td>direccion cliente 18</td>
+                        <td>Barrio 18</td>
+                        <td>Plus</td>
+                        <td><input type="checkbox"  name="verif" value="verificado"></td>
+                      </tr>
+                      <tr>
+                        <td>Baja</td>
+                        <td>Sin atender</td>
+                        <td>Cliente, 20</td>
+                        <td>258954</td>
+                        <td>direccion cliente 20</td>
+                        <td>Barrio 15</td>
+                        <td>Premium</td>
+                        <td><input type="checkbox" name="verif" value="verificado"></td>
+                      </tr>
+                
+                    </tbody>
+                  </table>  
+                </div>
+            </div>
+
+            </div>
+
+          </div>
           <div id="contenido" class="col-xs-12 col-sm-12 container">
 
               <div id="homePan" class="jumbotron">
                 <h1>Sistema de Administración CableTV</h1>
                  <p>Seleccione una de las opciones del menú a la izquierda</p>
               </div>
-              <!-- <iframe id="visor" src = "Viewer.js/#../" onload="hideLoadingBar()" allowfullscreen webkitallowfullscreen></iframe>-->
-             <!-- <iframe id="visor" class="collapse" src="http://institutolancaster.com"></iframe> -->
+
           </div>
 
         </div><!--/span-->
@@ -273,6 +846,19 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="jquery-1.11.0.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script> 
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script>
+      function initialize() {
+        var map_canvas = document.getElementById('map-canvas');
+        var map_options = {
+          center: new google.maps.LatLng(-27.432156, -58.988999),
+          zoom: 15,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(map_canvas, map_options)
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
     <script src="offcanvas.js"></script>
     <script src="sistema.js"></script>
 

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Villasanti Francisco">
+
+    <title>CableTV - Clientes</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="signin.css" rel="stylesheet">
+    <link href="stickyfooter.css" rel="stylesheet">
+    <link href="dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="offcanvas.css">
+    <link rel="stylesheet" type="text/css" href="sistema.css">
+
+  </head>
+
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Menu</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">CableTV - Mundo Clientes</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul id="navbarUsuario" class="nav navbar-nav navbar-right collapse">
+                
+                <li>
+                 <!-- <a id="currUser"><img id="imgUsuario" class="img-responsive" src="LogoLancaster.png"> Lancaster</a> -->
+             </li>
+                <li><a id="dologout" href="#">Salir</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+    <div id="marco" class="container">
+
+      <div id="encab" class="container">
+          <h1 id="nombre"><strong>CableTV-WebClient</strong></h1>
+          <!-- <img id="logo" src="LogoLancaster.png" class="img-responsive"> -->
+
+       <h4 id="subtitulo">Sistema web para clientes de CableTV</h4>
+      </div>
+
+      <div id="loaderContainer" class="container">
+      	<p>unos segundos...el sistema se está iniciando</p>
+      	 <img id="spin" src="loaderbar.gif">
+      </div>
+			
+          <form id="formulario" class="form-signin form-horizontal" role="form">
+            <!-- h4 class="form-signin-heading">Ingresa tus credenciales</h4> -->
+            <input id="usuario" class="form-control" placeholder="tu nombre de usuario" required autofocus>
+            <input id="pass" type="password" class="form-control" placeholder="tu contraseña" required>
+            <button id="submitBt" class="btn btn-lg btn-primary btn-block" type="submit">Iniciar Sesión</button>
+            <div id="alcahuete" class="alert alert-info alert-dismissable collapse">Ingresa tus credenciales</div>
+          </form>
+
+    </div> <!-- /container --> 
+    <div  id="menu" class="container collapse">
+        <!-- Fixed navbar -->
+
+    <div id="mainContainer" class="container">
+
+      <div class="row row-offcanvas row-offcanvas-left">
+
+        <div class="col-xs-6 col-sm-2 sidebar-offcanvas" id="sidebar" role="navigation">
+
+             <ul id="menuPpal" class="nav nav-pills nav-stacked">
+            <li class="active"><a >Home</a></li>
+             <li><a id="mreclamos" href="" >Reclamos</a></li> 
+            <!-- <li><a >Contratación de Servicios</a></li> -->
+            <li><a >Área Técnica</a></li> 
+            <li>
+              <a data-toggle="collapse" data-parent="#menuPpal" href="#ingresoSubmenu">
+               Contratación de Servicios <span class="caret"></span>
+               </a>
+               <div id="ingresoSubmenu" class="panel-collapse collapse in">
+                  <div class="panel-body">
+                      <ul  class="nav nav-pills nav-stacked" >
+                      <li id="mservbasico"><a href="#"> Servicio Básico</a></li>
+
+                      <!--<li id="mservadic" ><a href="#">Servicios Adicionales</a></li> -->
+                      </ul>
+                  </div>
+                </div>
+            </li>
+            <!--
+            <li >
+              <a data-toggle="collapse" data-parent="#menuPpal" href="#egresoSubmenu">
+               Egresos <span class="caret"></span>
+               </a>
+
+               <div id="egresoSubmenu" class="panel-collapse collapse in">
+                  <div class="panel-body">
+                      <ul  class="nav nav-pills nav-stacked" >
+                      <li  id="egresosDetalle" ><a >Detalle</a></li>
+                      <li id="egresosResumen" ><a >Resumen</a></li>
+                      </ul>
+                  </div>
+                </div>
+            </li>
+            -->      
+          </ul>  
+
+
+        </div><!--/span-->
+       
+         <div class="col-xs-12 col-sm-10">
+
+          <p class="pull-left visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Menu</button>
+          </p>
+
+          <!-- panel registro reclamo -->
+          <div id="regrecpan" class="col-xs-10 panel panel-default" >
+            <div class="panel-heading">
+              <h1>Registre su reclamo</h1>
+            </div>
+            <div class="panel-body">
+              <form id="regrecform" class="form form-horizontal" role="form">
+                <div >
+                <div class="row">
+                  <div class="form-group col-xs-6">
+                    <label for="rrncli">Nro Cliente</label>
+                      <input id="rrncli"  class="form-control" type="number">
+                  </div>
+                </div>
+
+                <div class="row">
+                   <div class="form-group col-xs-12">
+                     <label for="rrapynom">Apellido y Nombre</label>
+                    <input id="rrapynom" class="form-control">               
+                   </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group col-xs-9">
+                   <label for="rrcalle">Calle</label>
+                   <input id="rrcalle" class="form-control">               
+                 </div>
+                 <div class="form-group col-xs-3">
+                   <label for="rraltura">Altura</label>
+                   <input id="rraltura" class="form-control">               
+                 </div>
+                </div>
+
+                <div class="row">
+                <div class="form-group col-xs-4">
+                   <label for="rrbarrio">Barrio</label>
+                   <input id="rrbarrio" class="form-control">               
+                 </div>
+                 <div class="form-group col-xs-2">
+                   <label for="rrmz">Mz</label>
+                   <input id="rrmz" class="form-control">               
+                 </div>
+                 <div class="form-group col-xs-2">
+                   <label for="rrpc">Pc</label>
+                   <input id="rrpc" class="form-control">               
+                 </div>
+                 <div class="form-group col-xs-2">
+                   <label for="rrcs">Cs</label>
+                   <input id="rrcs" class="form-control">               
+                 </div>
+                 <div class="form-group col-xs-2">
+                   <label for="rrpiso">Piso</label>
+                   <input id="rrpiso" class="form-control">               
+                 </div>
+                 <div class="form-group col-xs-2">
+                   <label for="rrdpto">Dpto</label>
+                   <input id="rrdpto" class="form-control">               
+                 </div>
+                  
+                </div>
+
+                <div class="row">
+                  <div class="form-group col-xs-5">
+                   <label for="rrloc">Localidad</label>
+                   <input id="rrloc" class="form-control">               
+                  </div>
+                  <div class="form-group col-xs-5">
+                   <label for="rrzona">Zona</label>
+                   <input id="rrzona" class="form-control">               
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group col-xs-5">
+                   <label for="rrtelf">Tel fijo</label>
+                   <input id="rrtelf" class="form-control">               
+                  </div>
+                  <div class="form-group col-xs-5">
+                   <label for="rrtelc">Celular</label>
+                   <input id="rrtelc" class="form-control">               
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group col-xs-5">
+                   <label for="rrfechrec">Fecha Reclamo</label>
+                   <input id="rrfechrec" type="date" class="form-control">               
+                  </div>
+                  <div class="form-group col-xs-5">
+                   <label for="rrhorarec">Hora Reclamo</label>
+                   <input id="rrhorarec" type="time" class="form-control">               
+                  </div>
+                  
+                </div>
+
+                <div class="row">
+                  <div class="form-group col-xs-5">
+                   <label for="rrfechinic">Inicio del problema</label>
+                   <input id="rrfechinic" type="date" class="form-control">               
+                  </div>
+
+                <div class="form-group col-xs-6">      
+                  <label for="rrestcnx">Estado de conexión</label>
+                  <div class="input-group">
+                    <input id="rrestcnx"  class="form-control" type="number">
+                     <span class=" input-group-btn">
+                       <button id="arestcnxsearch" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                    </span> 
+                  </div>
+                <!--<input id="arestcnx" class="form-control" > -->
+                </div>
+                </div>
+                <div class="row">
+                  <div class="form-group col-xs-6">      
+                  <label for="rrestcnx">Describa su problema</label>
+                  <textarea class="form-control" rows="3"></textarea>
+                  </div>
+
+                <div class="row">
+                  <button id="arregrec" class="form-control col-xs-4 botform btn btn-primary btn-lg btn-block" type="submit">Confirmar</button>
+                </div>
+
+                </div>
+            
+              </form>  
+            </div>
+
+          </div>
+          <div id="sbpan" class="col-xs-10 panel panel-default" >
+            <div class="panel-heading">
+              <h1>Contratar el servicio</h1>
+            </div>
+            <div class="panel-body">
+              <form id="sbform" class="form form-horizontal" role="form">
+                <div >
+
+                <div class="row">
+                   <div class="form-group col-xs-5">
+                     <label for="sbap">Apellido</label>
+                    <input id="sbap" class="form-control">               
+                   </div>
+                  <div class="form-group col-xs-5">
+                     <label for="sbnom">Nombre</label>
+                    <input id="sbnom" class="form-control">               
+                   </div>
+                </div>
+                <hr>
+                <h6>Dirección</h6>
+                <div class="row">
+                  <div class="form-group col-xs-9">
+                   <label for="sbcalle">Calle</label>
+                   <input id="sbcalle" class="form-control">               
+                 </div>
+                 <div class="form-group col-xs-3">
+                   <label for="sbaltura">Altura</label>
+                   <input id="sbaltura" class="form-control">               
+                 </div>
+                </div>
+
+                <div class="row">
+                <div class="form-group col-xs-4">
+                   <label for="sbbarrio">Barrio</label>
+                   <input id="sbbarrio" class="form-control">               
+                 </div>
+                 <div class="form-group col-xs-2">
+                   <label for="sbmz">Mz</label>
+                   <input id="sbmz" class="form-control">               
+                 </div>
+                 <div class="form-group col-xs-2">
+                   <label for="sbpc">Pc</label>
+                   <input id="sbpc" class="form-control">               
+                 </div>
+                 <div class="form-group col-xs-2">
+                   <label for="sbcs">Cs</label>
+                   <input id="sbcs" class="form-control">               
+                 </div>
+                 <div class="form-group col-xs-2">
+                   <label for="sbpiso">Piso</label>
+                   <input id="sbpiso" class="form-control">               
+                 </div>
+                 <div class="form-group col-xs-2">
+                   <label for="sbdpto">Dpto</label>
+                   <input id="sbdpto" class="form-control">               
+                 </div>
+                  
+                </div>
+
+                <div class="row">
+                  <div class="form-group col-xs-5">
+                   <label for="sbloc">Localidad</label>
+                   <input id="sbloc" class="form-control">               
+                  </div>
+                  <div class="form-group col-xs-5">
+                   <label for="sbzona">Zona</label>
+                   <input id="sbzona" class="form-control">               
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group col-xs-5">
+                   <label for="sbtelf">Tel fijo</label>
+                   <input id="sbtelf" class="form-control">               
+                  </div>
+                  <div class="form-group col-xs-5">
+                   <label for="sbtelc">Celular</label>
+                   <input id="sbtelc" class="form-control">               
+                  </div>
+                </div>
+                <hr>
+
+                <div class="row">
+                  <div class="form-group col-xs-5">
+                   <label for="sbserv">Servicio a Contratar</label>
+                   <select id="sbserv" class="form-control">
+                      <option>Estándar</option>
+                      <option>Plus</option>
+                      <option>Premium</option>
+                   </select>            
+                  </div>
+                  <div class="form-group col-xs-5">
+                   <label for="sbfechinst">Fecha Instalación</label>
+                   <input id="sbfechinst" type="date" class="form-control">               
+                  </div>
+                  
+                </div>
+
+                <div class="row">
+                  <div class="form-group col-xs-5">
+                   <label for="sbfp">Forma de Pago</label>
+                   <select id="sbfp" class="form-control">
+                      <option>Efectivo</option>
+                      <option>Tarjeta crédito</option>
+                      <option>Tarjeta débito</option>
+                   </select>            
+                  </div>
+                </div>
+
+                <div class="row">
+                  <button id="arregrec" class="form-control col-xs-4 botform btn btn-primary btn-lg btn-block" type="submit">Confirmar</button>
+                </div>
+
+                </div>
+            
+              </form>  
+            </div>
+
+          </div>
+          <div id="contenido" class="col-xs-12 col-sm-12 container">
+
+              <div id="homePan" class="jumbotron">
+                <h1>Bienvenido a CableTV-WebClient</h1>
+                 <p>El sitio donde puede gestionar su servicio de cable</p>
+              </div>
+              <!-- <iframe id="visor" src = "Viewer.js/#../" onload="hideLoadingBar()" allowfullscreen webkitallowfullscreen></iframe>-->
+             <!-- <iframe id="visor" class="collapse" src="http://institutolancaster.com"></iframe> -->
+          </div>
+
+        </div><!--/span-->
+
+      </div><!--/row-->
+
+    </div><!--/.container-->
+
+    </div>
+    
+    <div id="footer">
+      <div class="container">
+        <p class="text-muted text-center"><strong> &copy CableTV.</strong> Derechos reservados</p>
+      </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="jquery-1.11.0.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script> 
+    <script src="offcanvas.js"></script>
+    <script src="sistema.js"></script>
+
+  </body>
+</html>
