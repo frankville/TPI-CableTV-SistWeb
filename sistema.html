@@ -43,30 +43,7 @@
         </div><!--/.nav-collapse -->
       </div>
     </div>
-    <div id="marco" class="container">
-
-      <div id="encab" class="container">
-          <h1 id="nombre"><strong>Sistema de Administración Web Cable-TV</strong></h1>
-          <!-- <img id="logo" src="LogoLancaster.png" class="img-responsive"> -->
-
-       <!--  <h4 id="subtitulo">Institute of English</h4> -->
-      </div>
-
-      <div id="loaderContainer" class="container">
-      	<p>unos segundos...el sistema se está iniciando</p>
-      	 <img id="spin" src="loaderbar.gif">
-      </div>
-			
-          <form id="formulario" class="form-signin form-horizontal" role="form">
-            <!-- h4 class="form-signin-heading">Ingresa tus credenciales</h4> -->
-            <input id="usuario" class="form-control" placeholder="tu nombre de usuario" required autofocus>
-            <input id="pass" type="password" class="form-control" placeholder="tu contraseña" required>
-            <button id="submitBt" class="btn btn-lg btn-primary btn-block" type="submit">Iniciar Sesión</button>
-            <div id="alcahuete" class="alert alert-info alert-dismissable collapse">Ingresa tus credenciales</div>
-          </form>
-
-    </div> <!-- /container --> 
-    <div  id="menu" class="container collapse">
+    <div  id="menu" class="container">
         <!-- Fixed navbar -->
 
     <div id="mainContainer" class="container">
@@ -75,7 +52,7 @@
 
         <div class="col-xs-6 col-sm-2 sidebar-offcanvas" id="sidebar" role="navigation">
 
-             <ul id="menuPpal" class="nav nav-pills nav-stacked">
+          <ul id="menuPpal" class="nav nav-pills nav-stacked">
             <li class="active"><a >Home</a></li>
             <li>
               <a data-toggle="collapse" data-parent="#menuPpal" href="#ingresoSubmenu">
@@ -84,8 +61,9 @@
                <div id="ingresoSubmenu" class="panel-collapse collapse in">
                   <div class="panel-body">
                       <ul  class="nav nav-pills nav-stacked" >
-                      <li id="mreclamos"><a href="#"> Reclamos</a></li>
-                      <li id="mlistrec"><a href="#"> Reclamos online</a></li>
+                      <li id="mreclamos"><a href="#atencion-reclamos">Verificar Reclamos</a></li>
+                      <li id="mlistrec"><a href="#">Verificar Reclamos online</a></li>
+                      <li id="mlistarecs"><a href="#"> Lista de Reclamos</a></li>
                       <!--<li id="mservadic" ><a href="#">Servicios Adicionales</a></li> -->
                       </ul>
                   </div>
@@ -122,22 +100,7 @@
                   </div>
                 </div>
             </li>
-            <!--
-            <li >
-              <a data-toggle="collapse" data-parent="#menuPpal" href="#egresoSubmenu">
-               Egresos <span class="caret"></span>
-               </a>
-
-               <div id="egresoSubmenu" class="panel-collapse collapse in">
-                  <div class="panel-body">
-                      <ul  class="nav nav-pills nav-stacked" >
-                      <li  id="egresosDetalle" ><a >Detalle</a></li>
-                      <li id="egresosResumen" ><a >Resumen</a></li>
-                      </ul>
-                  </div>
-                </div>
-            </li>
-            -->      
+    
           </ul>  
 
 
@@ -150,7 +113,7 @@
           </p>
           <div id="arpan" class="col-xs-10 col-sm-10  panel panel-default">
             <div class="panel-heading">
-              <h1 class="panel-title">Atencion Reclamos</h1>
+              <h1>Atencion Reclamos</h1>
             </div>
             <div class="panel-body">
               <form id="arform"  class="form-horizontal" role="form">
@@ -184,32 +147,31 @@
               <div class="row">
               <div class="form-group col-xs-12">
                  <label for="arapynom">Apellido y Nombre</label>
-                  <input id="arapynom" class="form-control">               
+                  <input id="arapynom" class="form-control" readonly>               
               </div>
               </div>
               <div class="row">
               <div class="form-group col-xs-12">
                 <label for="ardir">Direccion</label>
-                <input id="ardir" class="form-control" type="address">                
+                <input id="ardir" class="form-control" type="address" readonly>                
               </div>
               </div>
               <div class="row">
-              <div class="form-group col-xs-6">      
+              <div id="fgestcta" class="form-group col-xs-6">      
                 <label for="arestcta">Estado de cuenta</label>
-                <input id="arestcta" class="form-control" >
+                <input id="arestcta" class="form-control" placeholder="-----------" readonly>
               </div>
 
-              <div class="form-group col-xs-6">      
+              <div id="fgestcnx" class="form-group col-xs-6">      
                 <label for="arestcnx">Estado de conexión</label>
                 <div class="input-group">
-                  <input id="arestcnx"  class="form-control" type="number">
+
+                  <input id="arestcnx"  class="form-control" placeholder="-----------" readonly>
                  <span class=" input-group-btn">
                    <button id="arestcnxsearch" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
                  </span>
 
-                   
                  </div>
-                <!--<input id="arestcnx" class="form-control" > -->
               </div>
               </div>
               <div class="row">
@@ -228,54 +190,73 @@
               <form id="regrecform" class="form form-horizontal" role="form">
                 <div >
                 <div class="row">
-                  <div class="form-group col-xs-6">
+                  <div class="form-group col-xs-6">      
                     <label for="rrncli">Nro Cliente</label>
-                      <input id="rrncli"  class="form-control" type="number">
-                  </div>
-                </div>
+                  <div class="input-group">
+                    <input id="rrncli"  class="form-control" type="number">
+                   <span class=" input-group-btn">
+                     <button id="rrnclisearch" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                   </span>
 
+                     
+                   </div>
+                  <!--<input id="arestcnx" class="form-control" > -->
+                  </div>
+                  <div class="form-group col-xs-6">      
+                    <label for="rrdnitit">DNI Titular</label>
+                    <div class="input-group">
+                      <input id="rrdnitit"  class="form-control" type="number">
+                     <span class=" input-group-btn">
+                       <button id="rrdnititsearch" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                     </span>
+
+                       
+                     </div>
+                  </div>
+
+                </div>
                 <div class="row">
                    <div class="form-group col-xs-12">
                      <label for="rrapynom">Apellido y Nombre</label>
-                    <input id="rrapynom" class="form-control">               
+                    <input id="rrapynom" class="form-control" readonly>               
                    </div>
                 </div>
 
                 <div class="row">
                   <div class="form-group col-xs-9">
                    <label for="rrcalle">Calle</label>
-                   <input id="rrcalle" class="form-control">               
+                   <input id="rrcalle" class="form-control" readonly>               
                  </div>
                  <div class="form-group col-xs-3">
                    <label for="rraltura">Altura</label>
-                   <input id="rraltura" class="form-control">               
+                   <input id="rraltura" class="form-control" readonly>               
                  </div>
                 </div>
 
                 <div class="row">
                 <div class="form-group col-xs-4">
                    <label for="rrbarrio">Barrio</label>
-                   <input id="rrbarrio" class="form-control">               
+                   <input id="rrbarrio" class="form-control" readonly>               
                  </div>
                  <div class="form-group col-xs-2">
                    <label for="rrmz">Mz</label>
-                   <input id="rrmz" class="form-control">               
+                   <input id="rrmz" class="form-control" readonly>               
                  </div>
                  <div class="form-group col-xs-2">
                    <label for="rrpc">Pc</label>
-                   <input id="rrpc" class="form-control">               
+                   <input id="rrpc" class="form-control" readonly>               
                  </div>
                  <div class="form-group col-xs-2">
                    <label for="rrcs">Cs</label>
-                   <input id="rrcs" class="form-control">               
+                   <input id="rrcs" class="form-control" readonly>               
                  </div>
                  <div class="form-group col-xs-2">
                    <label for="rrpiso">Piso</label>
-                   <input id="rrpiso" class="form-control">               
+                   <input id="rrpiso" class="form-control" readonly>               
                  </div>
                  <div class="form-group col-xs-2">
                    <label for="rrdpto">Dpto</label>
-                   <input id="rrdpto" class="form-control">               
+                   <input id="rrdpto" class="form-control" readonly>               
                  </div>
                   
                 </div>
@@ -283,49 +264,46 @@
                 <div class="row">
                   <div class="form-group col-xs-5">
                    <label for="rrloc">Localidad</label>
-                   <input id="rrloc" class="form-control">               
+                   <input id="rrloc" class="form-control" readonly>               
                   </div>
                   <div class="form-group col-xs-5">
                    <label for="rrzona">Zona</label>
-                   <input id="rrzona" class="form-control">               
+                   <input id="rrzona" class="form-control" readonly>               
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="form-group col-xs-5">
                    <label for="rrtelf">Tel fijo</label>
-                   <input id="rrtelf" class="form-control">               
+                   <input id="rrtelf" class="form-control" readonly>               
                   </div>
                   <div class="form-group col-xs-5">
                    <label for="rrtelc">Celular</label>
-                   <input id="rrtelc" class="form-control">               
+                   <input id="rrtelc" class="form-control" readonly>               
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="form-group col-xs-5">
-                   <label for="rrfechrec">Fecha Reclamo</label>
-                   <input id="rrfechrec" type="date" class="form-control">               
+                   <label for="rrfechrec">Fecha/Hora reclamo</label>
+                   <input id="rrfechrec" type="datetime-local" class="form-control">               
                   </div>
                   <div class="form-group col-xs-5">
-                   <label for="rrhorarec">Hora Reclamo</label>
-                   <input id="rrhorarec" type="time" class="form-control">               
+                   <label for="rrfechinic">Fecha/Hora problema</label>
+                   <input id="rrfechinic" type="datetime-local" class="form-control">               
                   </div>
-                  
+
                 </div>
 
                 <div class="row">
-                  <div class="form-group col-xs-5">
-                   <label for="rrfechinic">Inicio del problema</label>
-                   <input id="rrfechinic" type="date" class="form-control">               
-                  </div>
 
-                <div class="form-group col-xs-6">      
+
+                <div id="rrfgcnx" class="form-group col-xs-6">      
                   <label for="rrestcnx">Estado de conexión</label>
                   <div class="input-group">
-                    <input id="rrestcnx"  class="form-control" type="number">
+                    <input id="rrestcnx"  class="form-control" readonly>
                      <span class=" input-group-btn">
-                       <button id="arestcnxsearch" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                       <button id="rrestcnxsearch" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
                     </span> 
                   </div>
                 <!--<input id="arestcnx" class="form-control" > -->
@@ -466,83 +444,125 @@
               <h1>Reclamos online</h1>
             </div>
             <div class="panel-body">
+              <div id="panConfirm" class="alert alert-info">verifique los reclamos listados</div>
+            <!-- modals 1 - 3 -->
+                <div id="modal1" class="modal fade">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">Verificación del reclamo</h4>
+                      </div>
+                      <div class="modal-body">
+
+                        <p id="msgmodal1">Verificando estado de cuenta y de conexión...aguarde</p>
+                          <img id="modloadbar1" src="loaderbar.gif">
+                          <div id="modresult1" class="row">
+                            <div class="col-xs-5 alert alert-success">Estado Cuenta al día</div>
+                            <div class="col-xs-5 alert alert-success">Conexión sin problemas</div>
+                          </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="confirmModal1()">Confirmar y enviar email</button>
+                      </div>
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+                <div id="modal2" class="modal fade">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">Verificación del reclamo</h4>
+                      </div>
+                      <div class="modal-body">
+                          <p id="msgmodal2">Verificando estado de cuenta y de conexión...aguarde</p>
+                          <img id="modloadbar2" src="loaderbar.gif">
+                          <div id="modresult2" class="row">
+                            <div class="col-xs-5 alert alert-success">Estado Cuenta al día</div>
+                            <div class="col-xs-5 alert alert-danger">Conexión con problemas</div>
+                          </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="confirmModal2()">Confirmar y enviar email</button>
+                      </div>
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+                <div id="modal3" class="modal fade">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">Verificación del reclamo</h4>
+                      </div>
+                      <div class="modal-body">
+                          <p id="msgmodal3">Verificando estado de cuenta y de conexión...aguarde</p>
+                          <img id="modloadbar3" src="loaderbar.gif">
+                          <div id="modresult3" class="row">
+                            <div class="col-xs-5 alert alert-danger">Estado Cuenta en mora</div>
+                            <div class="col-xs-5 alert alert-danger">Conexión con corte</div>
+                          </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="confirmModal3()">Confirmar y enviar email</button>
+                      </div>
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+                <!-- fin modals 1 - 3 -->
                 <div class="table-responsive paneles">
 
-                  <table id="lista" class="table-responsive">
+                  <table id="lista" class="table table-hover table-striped table-responsive">
                     <thead style="text-align: center">
                       <tr>
-                        <th style="width:5em ; text-align: center">ID Reclamo</th>
-                        <th style="width:30em ;  text-align: center">Fecha</th>
-                        <th style="width:30em ;  text-align: center">Hora</th>
-                        <th style="width:30em ;  text-align: center">Nro Cliente</th>
-                        <th style="width:30em ;  text-align: center">Descripción</th>
-                        <th style="width:30em ;  text-align: center">Enviar Email</th>
-                        <th style="width:30em ;  text-align: center">Cambiar Estado</th>
+                        <th class="col1">ID Reclamo</th>
+                        <th class="col2">Nro Cliente</th>
+                        <th class="col3">DNI</th>
+                        <th class="col4">Nom y Ap</th>
+                        <th class="col5">Dirección</th>
+                        <th class="col6">Fecha</th>
+                        <th class="col7">Hora</th>
+                        <th class="col8">Descripción</th>
+                        <th class="col9">Verificar</th>
                       </tr>
                     </thead>
-                    <tbody>
-                      <tr>
+                    <tbody >
+                      <tr id="fila1" class="warning">
                         <td>1</td>
-                        <td>7/06/2014</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>Juan Perez</td>
+                        <td>Liniers 630</td>
+                        <td>10/07/2014</td>
                         <td>18:00</td>
-                        <td>123456</td>
-                        <td>descripcion del problema 1 ....</td>
-                        <td><button class="btn btn-default">enviar email</button></td>
-                        <td><button class="btn btn-default">verificado</button></td>
+                        <td>Imagen defectuosa</td>
+                        <td><button class="btn btn-default" data-toggle="modal" data-target="#modal1" onclick="actionModal1()"><span class="glyphicon glyphicon-search"></button></td>
                       </tr>
-                      <tr>
+                      <tr id="fila2" class="warning">
                         <td>2</td>
-                        <td>8/06/2014</td>
-                        <td>18:00</td>
-                        <td>789456</td>
-                        <td>descripcion del problema 2 ....</td>
-                        <td><button class="btn btn-default">enviar email</button></td>
-                        <td><button class="btn btn-default">verificado</button></td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>Raul Benitez</td>
+                        <td>Irigoyen 302</td>
+                        <td>10/07/2014</td>
+                        <td>10:00</td>
+                        <td>Cortes intermitentes</td>
+                        <td><button class="btn btn-default" data-toggle="modal" data-target="#modal2" onclick="actionModal2()"><span class="glyphicon glyphicon-search"></button></td>
                       </tr>
-                      <tr>
+                      <tr id="fila3" class="warning">
                         <td>3</td>
-                        <td>7/06/2014</td>
-                        <td>18:00</td>
-                        <td>456789</td>
-                        <td>descripcion del problema 3....</td>
-                        <td><button class="btn btn-default">enviar email</button></td>
-                        <td><button class="btn btn-default">verificado</button></td>
-                      </tr>
-                      <tr>
-                        <td>4</td>
-                        <td>8/06/2014</td>
-                        <td>18:00</td>
-                        <td>789456</td>
-                        <td>descripcion del problema 4 ....</td>
-                        <td><button class="btn btn-default">enviar email</button></td>
-                        <td><button class="btn btn-default">verificado</button></td>
-                      </tr>
-                      <tr>
-                        <td>5</td>
-                        <td>10/06/2014</td>
-                        <td>18:00</td>
-                        <td>123789</td>
-                        <td>descripcion del problema 5 ....</td>
-                        <td><button class="btn btn-default">enviar email</button></td>
-                        <td><button class="btn btn-default">verificado</button></td>
-                      </tr>
-                      <tr>
-                        <td>6</td>
-                        <td>10/06/2014</td>
-                        <td>18:00</td>
-                        <td>321654</td>
-                        <td>descripcion del problema 6 ....</td>
-                        <td><button class="btn btn-default">enviar email</button></td>
-                        <td><button class="btn btn-default">verificado</button></td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>11/06/2014</td>
-                        <td>18:00</td>
-                        <td>131516514</td>
-                        <td>descripcion del problema 1 ....</td>
-                        <td><button class="btn btn-default">enviar email</button></td>
-                        <td><button class="btn btn-default">verificado</button></td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>Carlos Juarez</td>
+                        <td>Lopez y Planes 45</td>
+                        <td>10/07/2014</td>
+                        <td>13:00</td>
+                        <td>Sin servicio</td>
+                        <td><button class="btn btn-default" data-toggle="modal" data-target="#modal3" onclick="actionModal3()"><span class="glyphicon glyphicon-search"></button></td>
                       </tr>
                 
                     </tbody>
@@ -550,6 +570,69 @@
                 </div>
             </div>
 
+          </div>
+          <div id="panListaRecs" class="col-xs-10 panel panel-default">
+            <div class="panel-heading">
+                <h1>Lista de Reclamos</h1>
+            </div>
+            <div class="panel-body">
+            <div class="alert alert-info">Listado de los reclamos procesados en la última semana</div>
+              <div class="table-responsive paneles">
+
+                  <table id="tablarecs" class="table table-hover table-striped table-responsive">
+                    <thead style="text-align: center">
+                      <tr>
+                        <th class="col1">ID Reclamo</th>
+                        <th class="col2">Nro Cliente</th>
+                        <th class="col3">DNI</th>
+                        <th class="col4">Nom y Ap</th>
+                        <th class="col5">Dirección</th>
+                        <th class="col6">Fecha</th>
+                        <th class="col7">Hora</th>
+                        <th class="col8">Descripción</th>
+                      </tr>
+                    </thead>
+                    <tbody >
+                      <tr class="danger">
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>Juan Perez</td>
+                        <td>Liniers 630</td>
+                        <td>10/07/2014</td>
+                        <td>18:00</td>
+                        <td>Imagen defectuosa</td>
+                     
+                      </tr>
+                      <tr class="success">
+                        <td>2</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>Raul Benitez</td>
+                        <td>Irigoyen 302</td>
+                        <td>10/07/2014</td>
+                        <td>10:00</td>
+                        <td>Cortes intermitentes</td>
+                        
+                      </tr>
+                      <tr  class="success">
+                        <td>3</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>Carlos Juarez</td>
+                        <td>Lopez y Planes 45</td>
+                        <td>10/07/2014</td>
+                        <td>13:00</td>
+                        <td>Sin servicio</td>
+                        
+                      </tr>
+                
+                    </tbody>
+                  </table>  
+                </div>
+            </div>
+
+            </div>
           </div>
           <div id="atmappan" class="col-xs-10 panel panel-default" >
             <div class="panel-heading">
@@ -817,7 +900,7 @@
             </div>
 
           </div>
-          <div id="contenido" class="col-xs-12 col-sm-12 container">
+          <div id="contenido" class="col-xs-10 container">
 
               <div id="homePan" class="jumbotron">
                 <h1>Sistema de Administración CableTV</h1>

@@ -9,12 +9,12 @@ table {
 	width: 100%;
 	overflow: auto;
 }
-
+/*
 table tbody tr:hover {
     background-color: #FFFF99;
     cursor: pointer;
 }
-
+*/
 #map-canvas {
 
 	height: 30em;
@@ -51,6 +51,10 @@ table tbody tr:hover {
 	display: none;
 }
 
+#panListaRecs {
+	display: none;
+}
+
 #atreghrpan {
 	display: none;
 }
@@ -82,5 +86,83 @@ table tbody tr:hover {
 	margin-top: 30px;
 }
 
+.col1 {
+	width: 5px;
+	text-align: center;
+}
 
+.col2 {
+	width: 5px;
+	text-align: center;
+}
 
+.col3 {
+	width: 5px;
+	text-align: center;
+}
+
+.col4 {
+	width: 15px;
+	text-align: center;
+}
+
+.col5 {
+	width: 15px;
+	text-align: center;
+}
+
+.col6 {
+	width: 10px;
+	text-align: center;
+}
+
+.col7 {
+	width: 10px;
+	text-align: center;
+}
+
+.col8 {
+	width: 15px;
+	text-align: center;
+}
+
+.col9 {
+	width: 5px;
+	text-align: center;
+}
+
+#msgmodal1{
+	display: none;
+}
+
+#modloadbar1 {
+	display: none;
+}
+
+#modresult1 {
+	display: none;
+}
+
+#msgmodal2{
+	display: none;
+}
+
+#modloadbar2 {
+	display: none;
+}
+
+#modresult2 {
+	display: none;
+}
+
+#msgmodal3{
+	display: none;
+}
+
+#modloadbar3 {
+	display: none;
+}
+
+#modresult3 {
+	display: none;
+}
