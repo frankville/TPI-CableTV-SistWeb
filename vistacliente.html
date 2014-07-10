@@ -12,7 +12,6 @@
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="signin.css" rel="stylesheet">
     <link href="stickyfooter.css" rel="stylesheet">
     <link href="dashboard.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="offcanvas.css">
@@ -30,7 +29,8 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">CableTV - Mundo Clientes</a>
+          <a class="navbar-brand" href="#"><img style="width: 120px; height: 40px; margin-top: -7px;"
+             src="logo.png">  Mundo Clientes</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul id="navbarUsuario" class="nav navbar-nav navbar-right collapse">
@@ -43,29 +43,7 @@
         </div><!--/.nav-collapse -->
       </div>
     </div>
-    <div id="marco" class="container">
 
-      <div id="encab" class="container">
-          <h1 id="nombre"><strong>CableTV-WebClient</strong></h1>
-          <!-- <img id="logo" src="LogoLancaster.png" class="img-responsive"> -->
-
-       <h4 id="subtitulo">Sistema web para clientes de CableTV</h4>
-      </div>
-
-      <div id="loaderContainer" class="container">
-      	<p>unos segundos...el sistema se está iniciando</p>
-      	 <img id="spin" src="loaderbar.gif">
-      </div>
-			
-          <form id="formulario" class="form-signin form-horizontal" role="form">
-            <!-- h4 class="form-signin-heading">Ingresa tus credenciales</h4> -->
-            <input id="usuario" class="form-control" placeholder="tu nombre de usuario" required autofocus>
-            <input id="pass" type="password" class="form-control" placeholder="tu contraseña" required>
-            <button id="submitBt" class="btn btn-lg btn-primary btn-block" type="submit">Iniciar Sesión</button>
-            <div id="alcahuete" class="alert alert-info alert-dismissable collapse">Ingresa tus credenciales</div>
-          </form>
-
-    </div> <!-- /container --> 
     <div  id="menu" class="container collapse">
         <!-- Fixed navbar -->
 
@@ -112,56 +90,77 @@
               <h1>Registre su reclamo</h1>
             </div>
             <div class="panel-body">
+            <div id="rrpanConfirm" class="alert alert-info">Rellene el siguiente formulario para enviar su reclamo</div>
               <form id="regrecform" class="form form-horizontal" role="form">
+                <div >
                 <div class="row">
-                  <div class="form-group col-xs-6">
+                  <div class="form-group col-xs-6">      
                     <label for="rrncli">Nro Cliente</label>
-                      <input id="rrncli"  class="form-control" type="number">
-                  </div>
-                </div>
+                  <div class="input-group">
+                    <input id="rrncli"  class="form-control" type="number">
+                   <span class=" input-group-btn">
+                     <button id="rrnclisearch" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                   </span>
 
+                     
+                   </div>
+                  <!--<input id="arestcnx" class="form-control" > -->
+                  </div>
+                  <div class="form-group col-xs-6">      
+                    <label for="rrdnitit">DNI Titular</label>
+                    <div class="input-group">
+                      <input id="rrdnitit"  class="form-control" type="number">
+                     <span class=" input-group-btn">
+                       <button id="rrdnititsearch" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                     </span>
+
+                       
+                     </div>
+                  </div>
+
+                </div>
                 <div class="row">
                    <div class="form-group col-xs-12">
                      <label for="rrapynom">Apellido y Nombre</label>
-                    <input id="rrapynom" class="form-control">               
+                    <input id="rrapynom" class="form-control" readonly>               
                    </div>
                 </div>
 
                 <div class="row">
                   <div class="form-group col-xs-9">
                    <label for="rrcalle">Calle</label>
-                   <input id="rrcalle" class="form-control">               
+                   <input id="rrcalle" class="form-control" readonly>               
                  </div>
                  <div class="form-group col-xs-3">
                    <label for="rraltura">Altura</label>
-                   <input id="rraltura" class="form-control">               
+                   <input id="rraltura" class="form-control" readonly>               
                  </div>
                 </div>
 
                 <div class="row">
                 <div class="form-group col-xs-4">
                    <label for="rrbarrio">Barrio</label>
-                   <input id="rrbarrio" class="form-control">               
+                   <input id="rrbarrio" class="form-control" readonly>               
                  </div>
                  <div class="form-group col-xs-2">
                    <label for="rrmz">Mz</label>
-                   <input id="rrmz" class="form-control">               
+                   <input id="rrmz" class="form-control" readonly>               
                  </div>
                  <div class="form-group col-xs-2">
                    <label for="rrpc">Pc</label>
-                   <input id="rrpc" class="form-control">               
+                   <input id="rrpc" class="form-control" readonly>               
                  </div>
                  <div class="form-group col-xs-2">
                    <label for="rrcs">Cs</label>
-                   <input id="rrcs" class="form-control">               
+                   <input id="rrcs" class="form-control" readonly>               
                  </div>
                  <div class="form-group col-xs-2">
                    <label for="rrpiso">Piso</label>
-                   <input id="rrpiso" class="form-control">               
+                   <input id="rrpiso" class="form-control" readonly>               
                  </div>
                  <div class="form-group col-xs-2">
                    <label for="rrdpto">Dpto</label>
-                   <input id="rrdpto" class="form-control">               
+                   <input id="rrdpto" class="form-control" readonly>               
                  </div>
                   
                 </div>
@@ -169,63 +168,50 @@
                 <div class="row">
                   <div class="form-group col-xs-5">
                    <label for="rrloc">Localidad</label>
-                   <input id="rrloc" class="form-control">               
+                   <input id="rrloc" class="form-control" readonly>               
                   </div>
                   <div class="form-group col-xs-5">
                    <label for="rrzona">Zona</label>
-                   <input id="rrzona" class="form-control">               
+                   <input id="rrzona" class="form-control" readonly>               
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="form-group col-xs-5">
                    <label for="rrtelf">Tel fijo</label>
-                   <input id="rrtelf" class="form-control">               
+                   <input id="rrtelf" class="form-control" readonly>               
                   </div>
                   <div class="form-group col-xs-5">
                    <label for="rrtelc">Celular</label>
-                   <input id="rrtelc" class="form-control">               
+                   <input id="rrtelc" class="form-control" readonly>               
                   </div>
                 </div>
 
+
                 <div class="row">
+                <div class="form-group col-xs-7">
+                   <label for="rremail">Email</label>
+
+                      <input id="rremail" type="email" class="form-control">   
+                    
+                </div>
+                      <!-- la hora de reclamo se saca del sistema nomas -->
                   <div class="form-group col-xs-5">
-                   <label for="rrfechrec">Fecha Reclamo</label>
-                   <input id="rrfechrec" type="date" class="form-control">               
-                  </div>
-                  <div class="form-group col-xs-5">
-                   <label for="rrhorarec">Hora Reclamo</label>
-                   <input id="rrhorarec" type="time" class="form-control">               
-                  </div>
-                  
-                </div>
-
-                <div class="row">
-                  <div class="form-group col-xs-5">
-                   <label for="rrfechinic">Inicio del problema</label>
-                   <input id="rrfechinic" type="date" class="form-control">               
+                   <label for="rrfechinic">Fecha/Hora problema</label>
+                   <input id="rrfechinic" type="datetime-local" class="form-control">               
                   </div>
 
-                <div class="form-group col-xs-6">      
-                  <label for="rrestcnx">Estado de conexión</label>
-                  <div class="input-group">
-                    <input id="rrestcnx"  class="form-control" type="number">
-                     <span class=" input-group-btn">
-                       <button id="arestcnxsearch" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
-                    </span> 
+                </div>
+                  <div class="row">
+                     <label for="rrdescprob">Descripción</label>
+                     <textarea id="rrdescprob" rows="3" class="form-control"></textarea>     
                   </div>
-                <!--<input id="arestcnx" class="form-control" > -->
-                </div>
-                </div>
-                <div class="row">
-                  <div class="form-group col-xs-8">
-                   <label for="sbdescprob">Describa su problema</label>
-                    <textarea id="sbdescprob" class="form-control" rows="3"></textarea>            
-                  </div>
-                </div>
+
 
                 <div class="row">
-                  <button id="arregrec" class="form-control col-xs-4 botform btn btn-primary btn-lg" type="submit">Confirmar</button>
+                  <button id="arregrec" class="form-control col-xs-4 botform btn btn-primary btn-lg btn-block" type="submit">Confirmar</button>
+                </div>
+
                 </div>
             
               </form>  

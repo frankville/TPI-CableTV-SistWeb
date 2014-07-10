@@ -276,7 +276,7 @@ function regRecPorNroCliente() {
 				}else{
 					$("#rrdnitit").val("3");
 					$("#rrapynom").val("Carlos Juarez");
-					$("#rrdir").val("Lopez y Planes 45");
+					$("#rrcalle").val("Lopez y Planes");
 					$("#rraltura").val("45");
 					$("#rrbarrio").val("Barrio 3");
 					$("#rrmz").val("C");
@@ -329,7 +329,7 @@ function regRecPorDNICliente() {
 				}else{
 					$("#rrncli").val("3");
 					$("#rrapynom").val("Carlos Juarez");
-					$("#rrdir").val("Lopez y Planes 45");
+					$("#rrcalle").val("Lopez y Planes");
 					$("#rraltura").val("45");
 					$("#rrbarrio").val("Barrio 3");
 					$("#rrmz").val("C");

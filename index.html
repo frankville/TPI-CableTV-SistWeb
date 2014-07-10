@@ -5,208 +5,154 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="Villasanti Francisco">
+    <meta name="author" content="">
 
-    <title>Lancaster Dashboard</title>
+    <title>Bienvenidos a CableTV</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-   <!-- <link href='http://fonts.googleapis.com/css?family=Fondamento' rel='stylesheet' type='text/css'> -->
-    <!--<link rel="stylesheet" href="http://getbootstrap.com/examples/sticky-footer/sticky-footer.css"> -->
+
     <!-- Custom styles for this template -->
-    <link href="signin.css" rel="stylesheet">
-    <link href="stickyfooter.css" rel="stylesheet">
-    <link href="dashboard.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="offcanvas.css">
-
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <link href="carousel.css" rel="stylesheet">
+    <link href="landing.css" rel="stylesheet">
   </head>
-
+<!-- NAVBAR
+================================================== -->
   <body>
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="navbar-wrapper">
       <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Menu</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Sistema Web Cable-TV</a>
+
+        <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#"><img style="width: 120px; height: 40px; margin-top: -7px;"
+             src="logo.png"></a>
+              
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">La Empresa</a></li>
+                <li><a href="#contact">Responsabilidad Social</a></li>
+                <li><a href="logincliente.html">Acceso Clientes</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Acceso Empresa <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Reclamos</a></li>
+                    <li><a href="#">Contrataciones</a></li>
+                    <li><a href="#">Técnica</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Gerencia</li>
+                    <li><a href="#">Centro de Informes</a></li>
+                    <li><a href="#">Otros</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="navbar-collapse collapse">
-          <ul id="navbarUsuario" class="nav navbar-nav navbar-right collapse">
-                
-                <li>
-                  <a id="currUser"><img id="imgUsuario" class="img-responsive" src="LogoLancaster.png"> Lancaster</a>
-             </li>
-                <li><a id="dologout" href="#">Salir</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
+
       </div>
     </div>
-    <div id="marco" class="container">
 
-      <div id="encab" class="container">
-          <!--<h1 id="nombre"><strong>Sistema Web Cable-TV</strong></h1> -->
-          <!-- <img id="logo" src="LogoLancaster.png" class="img-responsive"> -->
 
-       <!--  <h4 id="subtitulo">Institute of English</h4> -->
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="grillacanales.jpg" class="imgcarousel" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption cajasCarousel" >
+              <h1>Contratación online</h1>
+              <p>Comience a disfrutar cuanto antes de la mejor programación en películas, series y más con el servicio de CableTV</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Contratar Hoy</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="grillacanales2.jpg" class="imgcarousel" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption cajasCarousel" style="color: white;">
+              <h1>Servicios Adicionales</h1>
+              <p>Conozca y contrate en línea la mejor selección de películas con nuestro servicio adicional</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Consultar</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="redessociales.png" class="imgcarousel"  alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption cajasCarousel">
+              <h1>Mantengase en contacto</h1>
+              <p>Infórmese sobre las últimas promociones, avisos y más por medio de las redes sociales</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Conocer más</a></p>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div id="loaderContainer" class="container">
-      	<p>unos segundos...el sistema se está iniciando</p>
-      	 <img id="spin" src="loaderbar.gif">
-      </div>
-			
-
-          <form id="formulario" class="form-signin form-horizontal" role="form">
-            <!-- h4 class="form-signin-heading">Ingresa tus credenciales</h4> -->
-            <input id="usuario" class="form-control" placeholder="tu nombre de usuario" required autofocus>
-            <input id="pass" type="password" class="form-control" placeholder="tu contraseña" required>
-            <button id="submitBt" class="btn btn-lg btn-primary btn-block" type="submit">Iniciar Sesión</button>
-            <div id="alcahuete" class="alert alert-info alert-dismissable collapse">Ingresa tus credenciales</div>
-          </form>
-
-    </div> <!-- /container --> 
-    <div  id="menu" class="container collapse">
-        <!-- Fixed navbar -->
-
-    <div id="mainContainer" class="container">
-
-      <div class="row row-offcanvas row-offcanvas-left">
-
-        <div class="col-xs-6 col-sm-2 sidebar-offcanvas" id="sidebar" role="navigation">
-
-             <ul id="menuPpal" class="nav nav-pills nav-stacked">
-            <li class="active"><a >Home</a></li>
-             <li><a id="mreclamos" href="" >Reclamos</a></li> 
-            <!-- <li><a >Contratación de Servicios</a></li> -->
-            <li><a >Área Técnica</a></li> 
-            <li>
-              <a data-toggle="collapse" data-parent="#menuPpal" href="#ingresoSubmenu">
-               Contratación de Servicios <span class="caret"></span>
-               </a>
-               <div id="ingresoSubmenu" class="panel-collapse collapse in">
-                  <div class="panel-body">
-                      <ul  class="nav nav-pills nav-stacked" >
-                      <li id="mservbasico"><a href="#"> Servicio Básico</a></li>
-                      <li id="mservadic" ><a href="#">Servicios Adicionales</a></li>
-                      </ul>
-                  </div>
-                </div>
-            </li>
-            <!--
-            <li >
-              <a data-toggle="collapse" data-parent="#menuPpal" href="#egresoSubmenu">
-               Egresos <span class="caret"></span>
-               </a>
-
-               <div id="egresoSubmenu" class="panel-collapse collapse in">
-                  <div class="panel-body">
-                      <ul  class="nav nav-pills nav-stacked" >
-                      <li  id="egresosDetalle" ><a >Detalle</a></li>
-                      <li id="egresosResumen" ><a >Resumen</a></li>
-                      </ul>
-                  </div>
-                </div>
-            </li>
-            -->      
-          </ul>  
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div><!-- /.carousel -->
 
 
-        </div><!--/span-->
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="img-circle" src="contacto.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <h2>Contáctenos</h2>
+          <p>Póngase en contacto con nosotros por medio de las líneas de comunicacion que disponemos para conocer más sobre nuestros productos y servicios</p>
+          <p><a class="btn btn-default" href="#" role="button">Mas&raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="informado.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <h2>Manténgase informado</h2>
+          <p>Conozca de forma inmediata las noticias, avisos, promociones y mucho más siguiéndonos en las redes sociales. Twitter, Facebook, YouTube</p>
+          <p><a class="btn btn-default" href="#" role="button">Más &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="maps.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <h2>¿Dónde estamos?</h2>
+          <p>Visítenos en horario comercial en cualquiera de nuestras sucursales. Vea más información para consultar qué sucursal se encuentra más cercana a su domicilio</p>
+          <p><a class="btn btn-default" href="#" role="button">Más &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+
+
+      <!-- FOOTER -->
+      <footer>
        
-         <div class="col-xs-12 col-sm-10">
+        <p>&copy; 2014 CableTV S.R.L. &middot; <a href="#">Privacidad</a> &middot; <a href="#">Términos</a></p>
+      </footer>
 
-          <p class="pull-left visible-xs">
-            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Menu</button>
-          </p>
-
-
-          <div id="ctrlResumenIngreso" class="col-xs-12 col-sm-9 container collapse">
-
-           <form id="formResumenIngresos" class="col-xs-12 col-sm-12 form-inline" role="form">
-              <div class="form-group form-inline">
-                <label for="mesInput">Mes de consulta</label>
-                 <input type="month"  class="form-control" id="mesInput">
-             </div>
-                 <button type="submit" class="btn btn-primary btn-default">Listo</button>
-          </form>
-
-          </div>
-
-          <div id="ctrlDetalleIngreso" class="col-xs-12 col-sm-9 container collapse">
-
-            <form class="col-xs-12 col-sm-12 form-inline" role="form">
-                <div class="form-group form-inline">
-                  <label for="mesInput">Fecha de la consulta</label>
-                  <input type="datetime-local" name ="mesInput" class="form-control" id="mesInput">
-                </div>
-                <button type="submit" class="btn btn-default">Listo</button>
-            </form>
-
-          </div>
-
-
-          <div id="ctrlListaAlu" class="col-xs-12 col-sm-12 container collapse">
-
-            <form id="formListaAlu" class="form-inline" role="form">
-                <h4>Alumnos activos</h4>
-                  <label for="fechaInput">Fecha de la consulta</label>
-                  <input type="date" class="form-control unInput" id="fechaInput">
-                <button type="submit" class="btn btn-lg btn-primary">Listo</button>
-            </form>
-            <div id="loaderDiv"><p>Un momento, generando el reporte...<img src="loaderbar.gif"></p></div>
-          </div>
-
-
-
-
-          <div id="contenido" class="col-xs-12 col-sm-12 container">
-
-              <div id="homePan" class="jumbotron">
-                <h1>Sistema de Administración CableTV</h1>
-                 <p>Seleccione una de las opciones del menú a la izquierda</p>
-              </div>
-              <!-- <iframe id="visor" src = "Viewer.js/#../" onload="hideLoadingBar()" allowfullscreen webkitallowfullscreen></iframe>-->
-             <!-- <iframe id="visor" class="collapse" src="http://institutolancaster.com"></iframe> -->
-          </div>
-
-        </div><!--/span-->
-
-      </div><!--/row-->
-
-    </div><!--/.container-->
-
-    </div>
-    
-    <div id="footer">
-      <div class="container">
-        <p class="text-muted text-center"><strong> &copy WorkCloud Systems.</strong> All rights reserved</p>
-      </div>
-    </div>
+    </div><!-- /.container -->
 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="jquery-1.11.0.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script> 
-    <script src="offcanvas.js"></script>
-    <script src="iniciosesion.js"></script>
-    <script src="login.js"></script>
-    <script src="carga.js"></script>
-    <script src="dashboard.js"></script>
-
-
+    <script src="bootstrap/js/bootstrap.min.js"></script>
 
   </body>
 </html>
