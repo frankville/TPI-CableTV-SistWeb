@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Bienvenidos a CableTV</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="contrataciononline.css" rel="stylesheet">
+    <link href="landing.css" rel="stylesheet">
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html"><img style="width: 120px; height: 40px; margin-top: -7px;"
+             src="logo.png"></a>
+              
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="contrataciononline.html">Contratar el servicio</a></li>
+                <li><a href="#about">La Empresa</a></li>
+                <li><a href="#contact">Responsabilidad Social</a></li>
+                <li><a href="logincliente.html">Acceso Clientes</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Acceso Empresa <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="sistemalogin.html">Reclamos</a></li>
+                    <li><a href="sistemalogin.html">Contrataciones</a></li>
+                    <li><a href="sistemalogin.html">Técnica</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Gerencia</li>
+                    <li><a href="#">Centro de Informes</a></li>
+                    <li><a href="#">Otros</a></li>
+                  </ul>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container maincontainer">
+    <div class="row">
+      <div id="sbpan" class="col-xs-10 panel panel-default"> <!-- panel principal -->
+        <div class="panel-heading">
+          <h1>Contratación del servicio</h1>
+        </div>
+        <div class="panel-body">
+
+          <div id="cspanconf" class="alert alert-info">Rellene el siguiente formulario para solicitar la instalación del servicio</div>       
+          <form id="csform" class="form-horizontal" role="form">
+              <div class="row">
+                <div class="form-group col-xs-12">
+                
+                <div id="csservicio" class="btn-group .btn-group.btn-group-justified" data-toggle="buttons">
+                  <label id="csservicio1" class="btn btn-default">
+                    <input  type="radio" name="options" checked> Servicio Estándar
+                  </label>
+                  <label id="csservicio2" class="btn btn-default">
+                    <input  type="radio" name="options"> Servicio Plus
+                  </label>
+                  <label id="csservicio3"  class="btn btn-default">
+                    <input  type="radio" name="options"> Servicio Premium
+                  </label>
+                </div>
+                </div>              
+
+
+              </div>
+              <div id="csservicioinfo" class="alert alert-info">Seleccione uno de los planes disponibles</div>
+
+
+                <div class="row">
+                  <div class="form-group col-xs-4">      
+                    <label for="rrdnitit">DNI Titular</label>
+                     <input id="rrdnitit"  class="form-control" type="number">
+                  </div>
+                   <div class="form-group col-xs-6">
+                    <label for="rrapynom">Apellido y Nombre</label>
+                    <input id="rrapynom" class="form-control" >               
+                   </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group col-xs-4">
+                   <label for="rrbarrio">Barrio</label>
+                   <input id="rrbarrio" class="form-control" >               
+                 </div>
+                  <div class="form-group col-xs-4">
+                   <label for="rrcalle">Calle</label>
+                   <input id="rrcalle" class="form-control" >               
+                 </div>
+                 <div class="form-group col-xs-2">
+                   <label for="rraltura">Altura</label>
+                   <input id="rraltura" class="form-control" >               
+                 </div>
+                  <div class="form-group col-xs-1">
+                   <label for="rrmz">Mz</label>
+                   <input id="rrmz" class="form-control" >               
+                 </div>
+                 <div class="form-group col-xs-1">
+                   <label for="rrpc">Pc</label>
+                   <input id="rrpc" class="form-control" >               
+                 </div>
+                 <div class="form-group col-xs-1">
+                   <label for="rrcs">Cs</label>
+                   <input id="rrcs" class="form-control" >               
+                 </div>
+
+                 <div class="form-group col-xs-1">
+                   <label for="rrpiso">Piso</label>
+                   <input id="rrpiso" class="form-control" >               
+                 </div>
+                 <div class="form-group col-xs-1">
+                   <label for="rrdpto">Dpto</label>
+                   <input id="rrdpto" class="form-control" >               
+                 </div>
+                </div>
+
+                <div class="row">
+
+
+                  
+                </div>
+
+                <div class="row">
+                  <div class="form-group col-xs-4">
+                   <label for="rrloc">Localidad</label>
+                   <select id="rrloc" class="form-control">
+                     <option>Resistencia</option>
+                     <option>Barranqueras</option>
+                     <option>Puerto Tirol</option>
+                     <option>Fontana</option>
+                     <option>Margarita Belén</option>
+                     <option>Colonia Benítez</option>
+                     <option>Cote Lai</option>
+                     <option>Charadai</option>
+                   </select>               
+                  </div>
+                  <div class="form-group col-xs-4">
+                   <label for="rrtelf">Tel fijo</label>
+                   <input id="rrtelf" class="form-control" >               
+                  </div>
+                  <div class="form-group col-xs-4">
+                   <label for="rrtelc">Celular</label>
+                   <input id="rrtelc" class="form-control" >               
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group col-xs-4">
+                   <label for="rrfechrec">1° Fecha Instalación</label>
+                   <input id="rrfechrec" type="datetime-local" class="form-control">               
+                  </div>
+                  <div class="form-group col-xs-4">
+                   <label for="rrfechinic">2° Fecha Instalación</label>
+                   <input id="rrfechinic" type="datetime-local" class="form-control">               
+                  </div>
+                  <div class="form-group col-xs-4">
+                   <label for="sbfp">Forma de Pago</label>
+                   <select id="sbfp" class="form-control">
+                      <option>Efectivo</option>
+                      <option>Tarjeta crédito</option>
+                      <option>Tarjeta débito</option>
+                   </select>            
+                  </div>
+
+                </div>
+                <div class="row">
+                  <div class="form-group col-xs-8">
+                     <label for="rremail">Email</label>
+                        <input id="rremail" type="email" class="form-control">     
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary form-control">Confirmar</button>
+            </form>
+        </div>
+    </div>      
+    </div>
+
+
+
+      <!-- FOOTER -->
+      <footer>
+       
+        <p>&copy; 2014 CableTV S.R.L. &middot; <a href="#">Privacidad</a> &middot; <a href="#">Términos</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="jquery-1.11.0.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="contrataciononline.js"></script>
+
+  </body>
+</html>

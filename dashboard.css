@@ -13,11 +13,6 @@ canvas {
 
 }
 
-form label {
-  font-size: 1.5em;
-  margin: 1em;
-}
-
 
 
 #contenido {
@@ -43,11 +38,6 @@ form label {
    width: 100%;
 }
 
-.unInput {
-  font-size: 1.5em;
-  margin: 1em;
-
-}
 
 #insignia {
   margin-right: 0.4em;
