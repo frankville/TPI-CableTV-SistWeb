@@ -110,7 +110,7 @@ function eventosRegReclamo(){
 
 
 function mostrarMsgExito(){
-	$("#rrpanConfirm").text("El reclamo se envió con éxito!");
+	$("#rrpanConfirm").text("El reclamo se envió con éxito! El área técnica lo evaluará y le enviará un email cuando esté en proceso.");
 	$("#rrpanConfirm").removeClass("alert-info");
 	$("#rrpanConfirm").addClass("alert-success");
 	setTimeout(function(){
