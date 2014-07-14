@@ -45,12 +45,8 @@ function hideAllPanels(){
 	$("#arpan").fadeOut("fast");
 	$("#regrecpan").fadeOut("fast");
 	$("#sbpan").fadeOut("fast");
-	$("#lrpan").fadeOut("fast");
-	$("#panListaRecs").fadeOut("fast");
-	$("#atmappan").fadeOut("fast");
-	$("#athrpan").fadeOut("fast");
-	$("#atreghrpan").fadeOut("fast");
-	$("#atreghrpan").fadeOut("fast");
+	$("#sapan").fadeOut("fast");
+
 
 };
 
