@@ -37,6 +37,7 @@ $(document).ready(function(){
 	});
 
 	eventosRegReclamo();
+	eventosServAdic();
 });
 
 function hideAllPanels(){
@@ -121,7 +122,7 @@ function mostrarMsgExito(){
 
 
 
-function regRecPorNroCliente() {
+function regRecPorNroCliente(){
 				var valor = $("#rrncli").val();
 			if(valor === "1"){
 				$("#rrdnitit").val("1");
@@ -244,4 +245,112 @@ function cleanFormReclamo(){
 				$("#rrtelc").val("");
 				$("#rrdescprob").val("");
 				$("#rremail").val("");
+}
+
+function eventosServAdic(){
+	$("#bt1").click(function(event){
+		$("#modalaceptar").unbind("click");
+		if($("#bt1").text() == "Contratar"){
+				$("#modalaceptar").click(function(e){
+				$("#fila1").addClass("success");
+				$("#bt1").text("Cancelar");
+			});
+		}else{
+			$("#modalaceptar").click(function(e){
+				$("#fila1").removeClass("success");
+				$("#bt1").text("Contratar");
+			});
+		};
+		
+	});
+	$("#bt2").click(function(event){
+		$("#modalaceptar").unbind("click");
+		if($("#bt2").text() === "Contratar"){
+				$("#modalaceptar").click(function(e){
+				$("#fila2").addClass("success");
+				$("#bt2").text("Cancelar");
+			});
+		}else{
+			$("#modalaceptar").click(function(e){
+				$("#fila2").removeClass("success");
+				$("#bt2").text("Contratar");
+			});
+		};
+		
+	});
+	$("#bt3").click(function(event){
+		$("#modalaceptar").unbind("click");
+		if($("#bt3").text() === "Contratar"){
+				$("#modalaceptar").click(function(e){
+				$("#fila3").addClass("success");
+				$("#bt3").text("Cancelar");
+			});
+		}else{
+			$("#modalaceptar").click(function(e){
+				$("#fila3").removeClass("success");
+				$("#bt3").text("Contratar");
+			});
+		};
+		
+	});
+	$("#bt4").click(function(event){
+		$("#modalaceptar").unbind("click");
+		if($("#bt4").text() === "Contratar"){
+				$("#modalaceptar").click(function(e){
+				$("#fila4").addClass("success");
+				$("#bt4").text("Cancelar");
+			});
+		}else{
+			$("#modalaceptar").click(function(e){
+				$("#fila4").removeClass("success");
+				$("#bt4").text("Contratar");
+			});
+		};
+		
+	});
+	$("#bt5").click(function(event){
+		$("#modalaceptar").unbind("click");
+		if($("#bt5").text() === "Contratar"){
+				$("#modalaceptar").click(function(e){
+				$("#fila5").addClass("success");
+				$("#bt5").text("Cancelar");
+			});
+		}else{
+			$("#modalaceptar").click(function(e){
+				$("#fila5").removeClass("success");
+				$("#bt5").text("Contratar");
+			});
+		};
+		
+	});
+	$("#bt6").click(function(event){
+		$("#modalaceptar").unbind("click");
+		if($("#bt6").text() === "Contratar"){
+				$("#modalaceptar").click(function(e){
+				$("#fila6").addClass("success");
+				$("#bt6").text("Cancelar");
+			});
+		}else{
+			$("#modalaceptar").click(function(e){
+				$("#fila6").removeClass("success");
+				$("#bt6").text("Contratar");
+			});
+		};
+		
+	});
+	$("#bt7").click(function(event){
+		$("#modalaceptar").unbind("click");
+		if($("#bt7").text() === "Contratar"){
+				$("#modalaceptar").click(function(e){
+				$("#fila7").addClass("success");
+				$("#bt7").text("Cancelar");
+			});
+		}else{
+			$("#modalaceptar").click(function(e){
+				$("#fila7").removeClass("success");
+				$("#bt7").text("Contratar");
+			});
+		};
+		
+	});
 }

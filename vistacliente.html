@@ -345,73 +345,107 @@
             </div>
 
           </div>
-                    <div id="sapan" class="col-xs-10 panel panel-default" >
+          <div id="sapan" class="col-xs-10 panel panel-default" >
             <div class="panel-heading">
               <h1>Contratar servicios adicionales</h1>
             </div>
             <div class="panel-body">
                 <p>Listado de películas para contratar</p>
-                <div class="table-responsive paneles">
+                <div id="myModal" class="modal fade">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">Confirmacion</h4>
+                      </div>
+                      <div class="modal-body">
+                        <p>Por favor confirme la accion</p>
+                      </div>
+                      <div class="modal-footer">
+                       <button id="modalaceptar"type="button" class="btn btn-primary" data-dismiss="modal">aceptar</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">cancelar</button>
+                       
+                      </div>
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+                <div class="table-responsive">
 
-                  <table id="lista" class="table-responsive">
+                  <table id="lista" class="table table-hover">
                     <thead style="text-align: center">
                       <tr>
-                        <th style="width:5em ; text-align: center">ID Servicio</th>
-                        <th style="width:30em ;  text-align: center">Título</th>
-                        <th style="width:30em ;  text-align: center">Horario</th>
-                        <th style="width:30em ;  text-align: center">Canal</th>
-                        <th style="width:30em ;  text-align: center">Contratar</th>
+                        <th class="fila">ID Servicio</th>
+                        <th class="fila">Título</th>
+                        <th class="fila">Estreno</th>
+                        <th class="fila" >Horario</th>
+                        <th class="fila">Canal</th>
+                        <th class="fila" >Precio</th>
+                        <th class="fila">Contratar</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
+                      <tr id="fila1">
                         <td>1</td>
                         <td>Titulo N° 1</td>
+                        <td>Si</td>
+                        <td>$17</td>
                         <td>18:00</td>
                         <td>Canal 1</td>
-                        <td><button class="btn btn-default">Contratar</button></td>
+                        <td><button id="bt1" class="btn btn-default" data-toggle="modal" data-target="#myModal">Contratar</button></td>
                       </tr>
-                      <tr>
+                      <tr id="fila2">
                         <td>2</td>
                         <td>Titulo N° 2</td>
+                        <td>No</td>
+                        <td>$10</td>
                         <td>22:00</td>
                         <td>Canal 3</td>
-                        <td><button class="btn btn-default">Contratar</button></td>
+                        <td><button id="bt2" class="btn btn-default" data-toggle="modal" data-target="#myModal">Contratar</button></td>
                       </tr>
-                      <tr>
+                      <tr id="fila3">
                         <td>3</td>
                         <td>Titulo N° 3</td>
+                        <td>Si</td>
+                        <td>$17</td>
                         <td>00:00</td>
                         <td>Canal 4</td>
-                        <td><button class="btn btn-default">Contratar</button></td>
+                        <td><button id="bt3" class="btn btn-default" data-toggle="modal" data-target="#myModal">Contratar</button></td>
                       </tr>
-                      <tr>
+                      <tr id="fila4">
                         <td>4</td>
                         <td>Titulo N° 4</td>
+                        <td>No</td>
+                        <td>$10</td>
                         <td>10:00</td>
                         <td>Canal 11</td>
-                        <td><button class="btn btn-default">Contratar</button></td>
+                        <td><button id="bt4" class="btn btn-default" data-toggle="modal" data-target="#myModal">Contratar</button></td>
                       </tr>
-                      <tr>
-                        <td>4</td>
-                        <td>Titulo N° 4</td>
+                      <tr id="fila5">
+                        <td>5</td>
+                        <td>Titulo N° 5</td>
+                        <td>Si</td>
+                        <td>$17</td>
                         <td>10:00</td>
                         <td>Canal 11</td>
-                        <td><button class="btn btn-default">Contratar</button></td>
+                        <td><button id="bt5" class="btn btn-default" data-toggle="modal" data-target="#myModal">Contratar</button></td>
                       </tr>
-                      <tr>
-                        <td>4</td>
-                        <td>Titulo N° 4</td>
+                      <tr id="fila6">
+                        <td>6</td>
+                        <td>Titulo N° 6</td>
+                        <td>Si</td>
+                        <td>$17</td>
                         <td>11:00</td>
                         <td>Canal 11</td>
-                        <td><button class="btn btn-default">Contratar</button></td>
+                        <td><button id="bt6" class="btn btn-default" data-toggle="modal" data-target="#myModal">Contratar</button></td>
                       </tr>
-                      <tr>
-                        <td>4</td>
-                        <td>Titulo N° 4</td>
+                      <tr id="fila7">
+                        <td>7</td>
+                        <td>Titulo N° 7</td>
+                        <td>No</td>
+                        <td>$10</td>
                         <td>12:00</td>
                         <td>Canal 11</td>
-                        <td><button class="btn btn-default">Contratar</button></td>
+                        <td><button id="bt7" class="btn btn-default" data-toggle="modal" data-target="#myModal">Contratar</button></td>
                       </tr>
                 
                     </tbody>

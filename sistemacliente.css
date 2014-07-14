@@ -13,6 +13,11 @@ table tbody tr:hover {
     cursor: pointer;
 }
 
+.fila {
+	text-align: center;
+	width: 50px;
+}
+
 #arpan {
 	display: none;
 }
