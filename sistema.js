@@ -116,6 +116,15 @@ $(document).ready(function(){
 		hideAllPanels();
 		$("#regrecpan").fadeIn("fast");
 	});
+	$("#csform").submit(function(event){
+		event.preventDefault();
+		contServExito();
+	});
+	$("#regrecform").submit(function(event){
+		
+		event.preventDefault();
+		mostrarRegRecMsgExito();
+	});
 	
 });
 
@@ -169,7 +178,20 @@ function atencionRecPorDNICliente() {
 					$("#arestcta").val("Se encuentra en mora");
 				}
 			}
-}
+};
+
+function mostrarRegRecMsgExito(){
+	$("#rrpanconf").text("El reclamo se registro con éxito! ");
+	$("#rrpanconf").removeClass("alert-info");
+	$("#rrpanconf").addClass("alert-success");
+	setTimeout(function(){
+		$("#rrpanconf").removeClass("alert-success");
+		$("#rrpanconf").addClass("alert-info");
+		$("#rrpanconf").text("Rellene el siguiente formulario para registrar el reclamo");
+	},5000);
+};
+
+
 
 function hideAllPanels(){
 	$("#contenido").fadeOut("fast");
@@ -237,6 +259,7 @@ function eventosRegReclamo(){
 			}
 		}
 	});	
+
 }
 
 
@@ -401,6 +424,16 @@ function mostrarMsgExito(){
 	},5000);
 }
 
+function contServExito(){
+	$("#csservicioinfo").text("La solicitud se registro con éxito!");
+	$("#csservicioinfo").removeClass("alert-info");
+	$("#csservicioinfo").addClass("alert-success");
+	setTimeout(function(){
+		$("#csservicioinfo").removeClass("alert-success");
+		$("#csservicioinfo").addClass("alert-info");
+		$("#csservicioinfo").text("seleccione un plan");
+	},5000);
+}
 
 function confirmModal1(){
 	$("#fila1").removeClass("warning");
