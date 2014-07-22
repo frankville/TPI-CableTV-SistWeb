@@ -3,7 +3,7 @@
 $(document).ready(function(){
 	$("#formulario").submit(function(event){
 		event.preventDefault();
-		window.location.href = "http://localhost/TPI-CableTV-SistWeb/sistema.html";
+		window.location.href = "http://devcloud.dnsdynamic.com/TPI-CableTV-SistWeb/sistema.html";
 	});
 	$("#mreclamos").click(function(event){
 		event.preventDefault();
@@ -92,6 +92,13 @@ $(document).ready(function(){
 		$("#sbpan").fadeIn("fast");
 
 	});
+	$("#atzonasyequipos").click(function(event){
+		event.preventDefault();
+		hideAllPanels();
+		$("#atzyepan").fadeIn("fast");
+
+	});
+	
 	$("#atmap").click(function(event){
 		event.preventDefault();
 		hideAllPanels();
@@ -109,8 +116,16 @@ $(document).ready(function(){
 		hideAllPanels();
 		$("#atreghrpan").fadeIn("fast");
 	});
-
-
+	$("#atco").click(function(event){
+		event.preventDefault();
+		hideAllPanels();
+		$("#atcontratacionesonline").fadeIn("fast");
+	});
+	$("#atrec").click(function(event){
+		event.preventDefault();
+		hideAllPanels();
+		$("#atreclamos").fadeIn("fast");
+	});
 	$("#sbform").submit(function(event){
 		event.preventDefault();
 		hideAllPanels();
@@ -125,7 +140,32 @@ $(document).ready(function(){
 		event.preventDefault();
 		mostrarRegRecMsgExito();
 	});
-	
+	$(".equipos").click(function(event){
+		event.preventDefault();
+		if($(this).closest("button").hasClass("btn-primary")){
+			$(this).closest("button").removeClass("btn-primary");
+			$(this).closest("button").addClass("btn-default");
+			$("#atzyeinfopan").text($(this).closest("button").text()+" se desvinculo con exito");
+				$("#atzyeinfopan").removeClass("alert-info");
+				$("#atzyeinfopan").addClass("alert-success");
+			setTimeout(function(){
+				$("#atzyeinfopan").text("Asigne equipos a las zonas");
+				$("#atzyeinfopan").removeClass("alert-success");
+				$("#atzyeinfopan").addClass("alert-info");
+			}, 5000);
+		}else{
+			$(this).closest("button").removeClass("btn-default");
+			$(this).closest("button").addClass("btn-primary");
+			$("#atzyeinfopan").text($(this).closest("button").text()+" se vinculo con exito");
+			$("#atzyeinfopan").removeClass("alert-info");
+			$("#atzyeinfopan").addClass("alert-success");
+			setTimeout(function(){
+				$("#atzyeinfopan").text("Asigne equipos a las zonas");
+				$("#atzyeinfopan").removeClass("alert-success");
+				$("#atzyeinfopan").addClass("alert-info");
+			}, 5000);
+		}
+	});
 });
 
 function atencionRecPorNroCliente() {
@@ -200,6 +240,9 @@ function hideAllPanels(){
 	$("#sbpan").fadeOut("fast");
 	$("#lrpan").fadeOut("fast");
 	$("#panListaRecs").fadeOut("fast");
+	$("#atzyepan").fadeOut("fast");
+	$("#atcontratacionesonline").fadeOut("fast");
+	$("#atreclamos").fadeOut("fast");
 	$("#atmappan").fadeOut("fast");
 	$("#athrpan").fadeOut("fast");
 	$("#atreghrpan").fadeOut("fast");
