@@ -121,11 +121,7 @@ $(document).ready(function(){
 		hideAllPanels();
 		$("#atcontratacionesonline").fadeIn("fast");
 	});
-	$("#atrec").click(function(event){
-		event.preventDefault();
-		hideAllPanels();
-		$("#atreclamos").fadeIn("fast");
-	});
+
 	$("#sbform").submit(function(event){
 		event.preventDefault();
 		hideAllPanels();
