@@ -166,6 +166,19 @@ $(document).ready(function(){
 			}, 5000);
 		}
 	});
+	$(".aghj").click(function(event){
+		event.preventDefault();
+		$(this).closest("tr").remove();
+		
+		$("#atreghrpaninfo").removeClass("alert-info");
+		$("#atreghrpaninfo").addClass("alert-success");
+		$("#atreghrpaninfo").text("La hoja de ruta se proceso y se agrego con exito");
+		setTimeout(function(){
+			$("#atreghrpaninfo").removeClass("alert-success");
+			$("#atreghrpaninfo").addClass("alert-info");
+			$("#atreghrpaninfo").text("determine la prioridad y el equipo de trabajo y agregue a la lista de hojas de ruta");
+		},5000);
+	});
 });
 
 function atencionRecPorNroCliente() {
