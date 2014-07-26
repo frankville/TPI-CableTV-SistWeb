@@ -175,6 +175,19 @@ $(document).ready(function(){
 			$("#atreghrpaninfo").text("determine la prioridad y el equipo de trabajo y agregue a la lista de hojas de ruta");
 		},5000);
 	});
+	$(".atcobtn").click(function(event){
+		event.preventDefault();
+		$(this).closest("tr").remove();
+		
+		$("#atcoinfo").removeClass("alert-info");
+		$("#atcoinfo").addClass("alert-success");
+		$("#atcoinfo").text("La contratacion se agrego con exito a las hojas de ruta");
+		setTimeout(function(){
+			$("#atcoinfo").removeClass("alert-success");
+			$("#atcoinfo").addClass("alert-info");
+			$("#atcoinfo").text("Confirme la fecha de instalacion y agregue a las hojas de ruta");
+		},5000);
+	});
 });
 
 function atencionRecPorNroCliente() {

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Villasanti Francisco">
+
+    <title>Sistema CableTV</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="signin.css" rel="stylesheet">
+    <link href="stickyfooter.css" rel="stylesheet">
+    <link href="dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="offcanvas.css">
+    <link rel="stylesheet" type="text/css" href="sistema.css">
+    <link rel="stylesheet" type="text/css" href="contrataciononline.css">
+
+  </head>
+
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Menu</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Cable-TV</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul id="navbarUsuario" class="nav navbar-nav navbar-right collapse">
+                
+                <li>
+                 <!-- <a id="currUser"><img id="imgUsuario" class="img-responsive" src="LogoLancaster.png"> Lancaster</a> -->
+             </li>
+                <li><a id="dologout" href="#">Salir</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div id="mainContainer" class="container">
+
+          <div id="athrpan" class="col-xs-12 panel panel-default" >
+            <div class="panel-heading">
+              <h1>Hojas de Ruta - Zona Nro 1</h1>
+            </div>
+            <div class="panel-body col-xs-12">           
+            <div class="row">
+                <div class="table-responsive paneles">
+
+                  <table id="lista" class="table table-stripped table-hover ">
+                    <thead>
+                      <tr>
+                        <th style="text-align: center; width: 30px;" >Prioridad</th>
+                        <th style="text-align: center; width: 30px;">Estado</th>
+                        <th style="text-align: center; width: 30px;">Ap y Nom</th>
+                        <th style="text-align: center; width: 30px;">Nro Cliente</th>
+                        <th style="text-align: center; width: 30px;">Direccion</th>
+                        <th style="text-align: center; width: 30px;">Barrio</th>
+                        <th style="text-align: center; width: 30px;">Serv. Contratado</th>
+                        <th style="text-align: center; width: 30px;" >Zona</th>
+                        <th style="text-align: center; width: 30px;">Equipo</th>
+                        <th style="text-align: center; width: 30px;">Resuelto</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Alta</td>
+                        <td>Nuevo</td>
+                        <td>Cliente, 1</td>
+                        <td>123456</td>
+                        <td>direccion cliente 1</td>
+                        <td>Barrio 2</td>
+                        <td>Estandar</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>
+                          <input type="checkbox" class="form-control" >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Alta</td>
+                        <td>S/ serv c/ rec</td>
+                        <td>Cliente, 2</td>
+                        <td>135424</td>
+                        <td>direccion cliente 2</td>
+                        <td>Barrio 3</td>
+                        <td>Plus</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>
+                          <input type="checkbox" class="form-control" >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Alta</td>
+                        <td>S/ serv c/ rec</td>
+                        <td>Cliente, 5</td>
+                        <td>521658</td>
+                        <td>direccion cliente 5</td>
+                        <td>Barrio 8</td>
+                        <td>Plus</td>
+                        <td>1</td>
+                        <td>3</td>
+                        <td>
+                          <input type="checkbox" class="form-control" >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Alta</td>
+                        <td>Nuevo</td>
+                        <td>Cliente, 5</td>
+                        <td>789564</td>
+                        <td>direccion cliente 5</td>
+                        <td>Barrio 8</td>
+                        <td>Premium</td>
+                        <td>1</td>
+                        <td>4</td>
+                        <td>
+                          <input type="checkbox" class="form-control" >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Media</td>
+                        <td>S/ serv s/ rec</td>
+                        <td>Cliente, 10</td>
+                        <td>159753</td>
+                        <td>direccion cliente 10</td>
+                        <td>Barrio 10</td>
+                        <td>Estandar</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>
+                          <input type="checkbox" class="form-control" >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Media</td>
+                        <td>S/ serv s/ rec</td>
+                        <td>Cliente, 18</td>
+                        <td>852963</td>
+                        <td>direccion cliente 18</td>
+                        <td>Barrio 18</td>
+                        <td>Plus</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>
+                          <input type="checkbox" class="form-control" >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Baja</td>
+                        <td>Limitado</td>
+                        <td>Cliente, 20</td>
+                        <td>258954</td>
+                        <td>direccion cliente 20</td>
+                        <td>Barrio 15</td>
+                        <td>Premium</td>
+                        <td>1</td>
+                        <td>3</td>
+                        <td>
+                          <input type="checkbox" class="form-control" >
+                        </td>
+                      </tr>
+                
+                    </tbody>
+                  </table>  
+                </div>
+            </div>
+
+            <div class="row">
+            <button class="btn btn-primary col-xs 5">Actualizar Hojas de ruta</button>
+
+            </div>
+            </div>
+
+          </div>
+
+
+    </div>
+
+    
+    <div id="footer">
+      <div class="container">
+        <p class="text-muted text-center"><strong> &copy CableTV.</strong> Derechos reservados</p>
+      </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="jquery-1.11.0.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script> 
+ 
+    <script src="sistema.js"></script>
+    <script src="contrataciononline.js"></script>
+    <script>
+    $("#athrpan").fadeIn("fast");
+    </script>
+
+  </body>
+</html>
