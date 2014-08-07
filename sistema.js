@@ -3,7 +3,7 @@
 $(document).ready(function(){
 	$("#formulario").submit(function(event){
 		event.preventDefault();
-		window.location.href = "http://devcloud.dnsdynamic.com/TPI-CableTV-SistWeb/sistema.html";
+		window.location.href = "sistema.html";
 	});
 	$("#mreclamos").click(function(event){
 		event.preventDefault();
