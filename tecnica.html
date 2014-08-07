@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Villasanti Francisco">
+
+    <title>Sistema CableTV</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="signin.css" rel="stylesheet">
+    <link href="stickyfooter.css" rel="stylesheet">
+    <link href="dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="offcanvas.css">
+    <link rel="stylesheet" type="text/css" href="sistema.css">
+    <link rel="stylesheet" type="text/css" href="contrataciononline.css">
+
+  </head>
+
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Menu</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img style="width: 120px; height: 40px; margin-top: -7px;"
+             src="logo.png"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul id="navbarUsuario" class="nav navbar-nav navbar-right collapse">
+                
+                <li>
+                 <!-- <a id="currUser"><img id="imgUsuario" class="img-responsive" src="LogoLancaster.png"> Lancaster</a> -->
+             </li>
+                <li><a id="dologout" href="#">Salir</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+    <div  id="menu" class="container">
+        <!-- Fixed navbar -->
+
+    <div id="mainContainer" class="container">
+
+      <div class="row row-offcanvas row-offcanvas-left">
+
+        <div class="col-xs-6 col-sm-2 sidebar-offcanvas" id="sidebar" role="navigation">
+
+          <ul id="menuPpal" class="nav nav-pills nav-stacked">
+            <li class="active"><a >Home</a></li>
+
+            <!-- <li><a >Contratación de Servicios</a></li> -->
+            <li>
+              <a data-toggle="collapse" data-parent="#menuPpal" href="#atsubmenu">
+               Área Técnica <span class="caret"></span>
+               </a>
+               <div id="atsubmenu" class="panel-collapse collapse in">
+                  <div class="panel-body">
+                      <ul  class="nav nav-pills nav-stacked" >
+                      <li id="atzonasyequipos"><a href="#"> Zonas y Equipos</a></li>
+                      <li id="atco"><a href="#">Contrataciones online</a></li>
+
+                      <li id="atmap"><a href="#"> Mapa</a></li>
+                      <li id="atreghr"><a href="#">Nuevas Hojas de ruta</a></li>
+                      <li id="athojaruta"><a href="#"> Listado Hojas de Ruta</a></li>
+                      <!--<li id="mservadic" ><a href="#">Servicios Adicionales</a></li> -->
+                      </ul>
+                  </div>
+                </div>
+            </li> 
+    
+          </ul>  
+
+
+        </div><!--/span-->
+       
+         <div class="col-xs-12 col-sm-10">
+
+          <p class="pull-left visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Menu</button>
+          </p>
+
+          <div id="contenido" class="col-xs-7">
+
+              <div id="homePan" class="jumbotron">
+                <h1>Sistema Administración CableTV</h1>
+                 <p>Seleccione una de las opciones del menú a la izquierda</p>
+              </div>
+
+          </div>
+          <div id="atcontratacionesonline" class="col-xs-12 panel panel-default">
+            <div class="panel-heading">
+              <h1>Contrataciones Online</h1>
+            </div>
+            <div class="panel-body">
+              <div id="atcoinfo" class="alert alert-info">Confirme la fecha de instalacion y agregue a las hojas de ruta</div>
+              <div class="table-responsive">
+                <table class="table table-stripped table-hover">
+                  <thead>
+                      <tr>
+                        <th style="text-align: center; width: 30px;">DNI</th>
+                        <th style="text-align: center; width: 30px;">Ap y Nom</th>
+                        <th style="text-align: center; width: 30px;">Direccion</th>
+                        <th style="text-align: center; width: 30px;">Localidad</th>
+                        <th style="text-align: center; width: 30px;">Telefono</th>
+                        <th style="text-align: center; width: 30px;" >Celular</th>
+                        <th style="text-align: center; width: 30px;">Email</th>
+                        <th style="text-align: center; width: 30px;">Serv. Contratado</th>
+                        <th style="text-align: center; width: 120px;" >Fechas Instal</th>
+                        <th style="text-align: center; width: 30px;">Agregar</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Cliente, 1</td>
+                        <td>direccion cliente 1</td>
+                        <td>Resistencia</td>
+                        <td>3624456789</td>
+                        <td>3624834756</td>
+                        <td>f@g.c</td>
+                        <td>Premium</td>
+                        <td>
+                          <select class="form-control">
+                            <option>01-09-2014</option>
+                            <option>07-09-2014</option>
+                          </select>
+                        </td>
+                        <td>
+                          <button class="btn btn-default">
+                            <span class="glyphicon glyphicon-plus atcobtn"></span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Cliente, 2</td>
+                        <td>direccion cliente 2</td>
+                        <td>Resistencia</td>
+                        <td>3624456789</td>
+                        <td>3624834756</td>
+                        <td>f@g.c</td>
+                        <td>Plus</td>
+                        <td>
+                          <select class="form-control">
+                            <option>02-09-2014</option>
+                            <option>03-09-2014</option>
+                          </select>
+                        </td>
+                        <td>
+                          <button class="btn btn-default">
+                            <span class="glyphicon glyphicon-plus atcobtn"></span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Cliente, 3</td>
+                        <td>direccion cliente 3</td>
+                        <td>Resistencia</td>
+                        <td>3624456789</td>
+                        <td>3624834756</td>
+                        <td>f@g.c</td>
+                        <td>Premium</td>
+                        <td>
+                          <select class="form-control">
+                            <option>04-09-2014</option>
+                            <option>05-09-2014</option>
+                          </select>
+                        </td>
+                        <td>
+                          <button class="btn btn-default">
+                            <span class="glyphicon glyphicon-plus atcobtn"></span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>Cliente, 5</td>
+                        <td>direccion cliente 5</td>
+                        <td>Resistencia</td>
+                        <td>3624456789</td>
+                        <td>3624834756</td>
+                        <td>f@g.c</td>
+                        <td>Basico</td>
+                        <td>
+                          <select class="form-control">
+                            <option>20-09-2014</option>
+                            <option>21-09-2014</option>
+                          </select>
+                        </td>
+                        <td>
+                          <button class="btn btn-default">
+                            <span class="glyphicon glyphicon-plus atcobtn"></span>
+                          </button>
+                        </td>
+                      </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div id="atzyepan" class="col-xs-12 panel panel-default">
+            <div class="panel-heading">
+              <h1>Zonas y Equipos</h1>
+
+            </div>
+            <div class="panel-body">
+              <div id="atzyeinfopan" class="alert alert-info">
+                Asigne los equipos a las zonas
+              </div>
+             <div class="row">
+              <div style="margin: 20px 20px;" class="col-xs-5">
+                <h4>Zona Nro 1</h4>
+                <div class="paneles">
+                  <div class="row">
+                    <button type="button" class="col-xs-3 btn btn-default equipos " data-toggle="button">Equipo 1</button>
+                    <button type="button" class="col-xs-3 btn btn-default equipos " data-toggle="button">Equipo 2</button>
+                    <button type="button" class="col-xs-3 btn btn-default equipos " data-toggle="button">Equipo 3</button>
+                  </div>
+                  <div class="row">
+                    <button type="button" class="col-xs-3 btn btn-default equipos" data-toggle="button">Equipo 4</button>
+                    <button type="button" class="col-xs-3 btn btn-default equipos" data-toggle="button">Equipo 5</button>
+                    <button type="button" class="col-xs-3 btn btn-default equipos" data-toggle="button">Equipo 6</button>
+                  </div>
+                  <div class="row">
+                    <button type="button" class="col-xs-3 btn btn-default equipos" data-toggle="button">Equipo 7</button>
+                    <button type="button" class="col-xs-3 btn btn-default equipos" data-toggle="button">Equipo 8</button>
+                    <button type="button" class="col-xs-3 btn btn-default equipos" data-toggle="button">Equipo 9</button>
+                  </div>
+                  <div class="row">
+                    <button type="button" class="col-xs-3 btn btn-default equipos" data-toggle="button">Equipo 10</button>
+                    <button type="button" class="col-xs-3 btn btn-default equipos" data-toggle="button">Equipo 11</button>
+                    
+                  </div>
+                </div>
+              </div>
+              <div style="margin: 20px 20px;" class="col-xs-5">
+                <h4>Zona Nro 2</h4>
+                <div class="paneles">
+                  <div class="row">
+                    <button type="button" class="col-xs-3 btn btn-default equipos " data-toggle="button">Equipo 1</button>
+                    <button type="button" class="col-xs-3 btn btn-default equipos " data-toggle="button">Equipo 2</button>
+                    <button type="button" class="col-xs-3 btn btn-default equipos " data-toggle="button">Equipo 3</button>
+                  </div>
+                  <div class="row">
+                    <button type="button" class="col-xs-3 btn btn-default equipos" data-toggle="button">Equipo 4</button>
+                    <button type="button" class="col-xs-3 btn btn-default equipos" data-toggle="button">Equipo 5</button>
+                    <button type="button" class="col-xs-3 btn btn-default equipos" data-toggle="button">Equipo 6</button>
+                  </div>
+                  <div class="row">
+                    <button type="button" class="col-xs-3 btn btn-default equipos" data-toggle="button">Equipo 7</button>
+                    <button type="button" class="col-xs-3 btn btn-default equipos" data-toggle="button">Equipo 8</button>
+                    <button type="button" class="col-xs-3 btn btn-default equipos" data-toggle="button">Equipo 9</button>
+                  </div>
+                  <div class="row">
+                    <button type="button" class="col-xs-3 btn btn-default equipos" data-toggle="button">Equipo 10</button>
+                    <button type="button" class="col-xs-3 btn btn-default equipos" data-toggle="button">Equipo 11</button>
+                    
+                  </div>
+                </div>
+              </div>
+             </div>                   
+             <div class="row">
+              <div style="margin: 20px 20px;" class="col-xs-5">
+                <h4>Zona Nro 3</h4>
+                <div class="paneles">
+                  <div class="row">
+                    <button type="button" class="col-xs-3 btn btn-default equipos " data-toggle="button">Equipo 1</button>
+                    <button type="button" class="col-xs-3 btn btn-default equipos " data-toggle="button">Equipo 2</button>
+                    <button type="button" class="col-xs-3 btn btn-default equipos " data-toggle="button">Equipo 3</button>
+                  </div>
+                  <div class="row">
+                    <button type="button" class="col-xs-3 btn btn-default equipos" data-toggle="button">Equipo 4</button>
+                    <button type="button" class="col-xs-3 btn btn-default equipos" data-toggle="button">Equipo 5</button>
+                    <button type="button" class="col-xs-3 btn btn-default equipos" data-toggle="button">Equipo 6</button>
+                  </div>
+                  <div class="row">
+                    <button type="button" class="col-xs-3 btn btn-default equipos" data-toggle="button">Equipo 7</button>
+                    <button type="button" class="col-xs-3 btn btn-default equipos" data-toggle="button">Equipo 8</button>
+                    <button type="button" class="col-xs-3 btn btn-default equipos" data-toggle="button">Equipo 9</button>
+                  </div>
+                  <div class="row">
+                    <button type="button" class="col-xs-3 btn btn-default equipos" data-toggle="button">Equipo 10</button>
+                    <button type="button" class="col-xs-3 btn btn-default equipos" data-toggle="button">Equipo 11</button>
+                    
+                  </div>
+                </div>
+              </div>
+              <div style="margin: 20px 20px;" class="col-xs-5">
+                <h4>Zona Nro 4</h4>
+                <div class="paneles">
+                  <div class="row">
+                    <button type="button" class="col-xs-3 btn btn-default equipos " data-toggle="button">Equipo 1</button>
+                    <button type="button" class="col-xs-3 btn btn-default equipos " data-toggle="button">Equipo 2</button>
+                    <button type="button" class="col-xs-3 btn btn-default equipos " data-toggle="button">Equipo 3</button>
+                  </div>
+                  <div class="row">
+                    <button type="button" class="col-xs-3 btn btn-default equipos" data-toggle="button">Equipo 4</button>
+                    <button type="button" class="col-xs-3 btn btn-default equipos" data-toggle="button">Equipo 5</button>
+                    <button type="button" class="col-xs-3 btn btn-default equipos" data-toggle="button">Equipo 6</button>
+                  </div>
+                  <div class="row">
+                    <button type="button" class="col-xs-3 btn btn-default equipos" data-toggle="button">Equipo 7</button>
+                    <button type="button" class="col-xs-3 btn btn-default equipos" data-toggle="button">Equipo 8</button>
+                    <button type="button" class="col-xs-3 btn btn-default equipos" data-toggle="button">Equipo 9</button>
+                  </div>
+                  <div class="row">
+                    <button type="button" class="col-xs-3 btn btn-default equipos" data-toggle="button">Equipo 10</button>
+                    <button type="button" class="col-xs-3 btn btn-default equipos" data-toggle="button">Equipo 11</button>
+                    
+                  </div>
+                </div>
+              </div>
+             </div>
+              
+            </div>
+          </div>
+          <div id="atmappan" class="col-xs-12 panel panel-default" >
+            <div class="panel-heading">
+              <h1>Mapa de zonas y reclamos</h1>
+            </div>
+            <div class="panel-body">           
+            <div class="row">
+              <div class="col-xs-5">
+                <label for="zonacombo">Selecciona la zona</label>
+                <select class="form-control form-inline">
+                  <option>zona 1</option>
+                  <option>zona 2</option>
+                  <option>zona 3</option>
+                  <option>zona 4</option>
+                  <option>zona 5</option>
+                </select>
+              </div>
+              <div class="col-xs-4"></div>
+            </div>
+
+            <div id="map-canvas" class="col-xs-12"></div>
+            <div class="row">
+              <div class="col-xs-5">
+                <div class="alert alert-success">Conexiones Correctas: 45</div>
+              </div>
+              <div class="col-xs-5">
+
+                <div class="alert alert-info">Conexiones Pendientes: 10</div>
+              </div>
+
+            </div>
+            <div class="row">
+              <div class="col-xs-5">
+
+                <div class="alert alert-warning">Conexiones c/ problemas: 45</div>
+              </div>
+              <div class="col-xs-5">
+                <div class="alert alert-danger">Conexiones c/ corte: 10</div>
+              </div>
+
+            </div>
+            </div>
+
+          </div>
+          <div id="athrpan" class="col-xs-12 panel panel-default" >
+            <div class="panel-heading">
+              <h1>Hojas de Ruta</h1>
+            </div>
+            <div class="panel-body col-xs-12">           
+            <div class="row">
+                <div class="table-responsive paneles">
+
+                  <table id="lista" class="table table-stripped table-hover ">
+                    <thead>
+                      <tr>
+                        <th style="text-align: center; width: 30px;" >Prioridad</th>
+                        <th style="text-align: center; width: 30px;">Estado</th>
+                        <th style="text-align: center; width: 30px;">Ap y Nom</th>
+                        <th style="text-align: center; width: 30px;">Nro Cliente</th>
+                        <th style="text-align: center; width: 30px;">Direccion</th>
+                        <th style="text-align: center; width: 30px;">Barrio</th>
+                        <th style="text-align: center; width: 30px;">Serv. Contratado</th>
+                        <th style="text-align: center; width: 30px;" >Zona</th>
+                        <th style="text-align: center; width: 30px;">Equipo</th>
+                        <th style="text-align: center; width: 30px;">Editar</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Alta</td>
+                        <td>Nuevo</td>
+                        <td>Cliente, 1</td>
+                        <td>123456</td>
+                        <td>direccion cliente 1</td>
+                        <td>Barrio 2</td>
+                        <td>Estandar</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>
+                          <button class="btn btn-default">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Alta</td>
+                        <td>S/ serv c/ rec</td>
+                        <td>Cliente, 2</td>
+                        <td>135424</td>
+                        <td>direccion cliente 2</td>
+                        <td>Barrio 3</td>
+                        <td>Plus</td>
+                        <td>2</td>
+                        <td>6</td>
+                        <td>
+                          <button class="btn btn-default">
+                             <span class="glyphicon glyphicon-pencil"></span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Alta</td>
+                        <td>S/ serv c/ rec</td>
+                        <td>Cliente, 5</td>
+                        <td>521658</td>
+                        <td>direccion cliente 5</td>
+                        <td>Barrio 8</td>
+                        <td>Plus</td>
+                        <td>2</td>
+                        <td>7</td>
+                        <td>
+                          <button class="btn btn-default">
+                             <span class="glyphicon glyphicon-pencil"></span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Alta</td>
+                        <td>Nuevo</td>
+                        <td>Cliente, 5</td>
+                        <td>789564</td>
+                        <td>direccion cliente 5</td>
+                        <td>Barrio 8</td>
+                        <td>Premium</td>
+                        <td>3</td>
+                        <td>8</td>
+                        <td>
+                          <button class="btn btn-default">
+                             <span class="glyphicon glyphicon-pencil"></span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Media</td>
+                        <td>S/ serv s/ rec</td>
+                        <td>Cliente, 10</td>
+                        <td>159753</td>
+                        <td>direccion cliente 10</td>
+                        <td>Barrio 10</td>
+                        <td>Estandar</td>
+                        <td>3</td>
+                        <td>9</td>
+                        <td>
+                          <button class="btn btn-default">
+                             <span class="glyphicon glyphicon-pencil"></span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Media</td>
+                        <td>S/ serv s/ rec</td>
+                        <td>Cliente, 18</td>
+                        <td>852963</td>
+                        <td>direccion cliente 18</td>
+                        <td>Barrio 18</td>
+                        <td>Plus</td>
+                        <td>4</td>
+                        <td>10</td>
+                        <td>
+                          <button class="btn btn-default">
+                             <span class="glyphicon glyphicon-pencil"></span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Baja</td>
+                        <td>Limitado</td>
+                        <td>Cliente, 20</td>
+                        <td>258954</td>
+                        <td>direccion cliente 20</td>
+                        <td>Barrio 15</td>
+                        <td>Premium</td>
+                        <td>4</td>
+                        <td>11</td>
+                        <td>
+                          <button class="btn btn-default">
+                             <span class="glyphicon glyphicon-pencil"></span>
+                          </button>
+                        </td>
+                      </tr>
+                
+                    </tbody>
+                  </table>  
+                </div>
+            </div>
+
+            <div class="row">
+            <button class="btn btn-primary col-xs 5">Actualizar Hojas de ruta</button>
+
+            </div>
+            </div>
+
+          </div>
+          <div id="atreghrpan" class="col-xs-12 panel panel-default" >
+            <div class="panel-heading">
+              <h1>Hojas de ruta a confirmar</h1>
+            </div>
+            <div class="panel-body">
+            <div id="atreghrpaninfo" class="alert alert-info">determine la prioridad y el equipo de trabajo y agregue a la lista de hojas de ruta</div>
+            <div class="row">
+                <div class="table-responsive paneles">
+
+                  <table id="lista" class="table table-stripped ">
+                    <thead>
+                      <tr>
+                        <th style="text-align: center; width: 30px;" >Prioridad</th>
+                        <th style="text-align: center; width: 30px;">Estado</th>
+                        <th style="text-align: center; width: 30px;">Ap y Nom</th>
+                        <th style="text-align: center; width: 30px;">Nro Cliente</th>
+                        <th style="text-align: center; width: 30px;">Direccion</th>
+                        <th style="text-align: center; width: 30px;">Barrio</th>
+                        <th style="text-align: center; width: 30px;">Serv. Contratado</th>
+                        <th style="text-align: center; width: 30px;" >Zona</th>
+                        <th style="text-align: center; width: 30px;">Equipo</th>
+                        <th style="text-align: center; width: 30px;">Agregar</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <select  class="form-control">
+                            <option>Alta</option>
+                            <option>Media</option>
+                            <option>Baja</option>
+                          </select>
+                        </td>
+                        <td>Nuevo</td>
+                        <td>Cliente, 1</td>
+                        <td>123456</td>
+                        <td>direccion cliente 1</td>
+                        <td>Barrio 2</td>
+                        <td>Estandar</td>
+                        <td>1</td>
+                        <td>
+                          <select  class="form-control">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                          </select>
+                        </td>
+                        <td>
+                          <button class="btn btn-default aghj">OK</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <select  class="form-control">
+                            <option>Alta</option>
+                            <option>Media</option>
+                            <option>Baja</option>
+                          </select>
+                        </td>
+                        <td>S/ serv c/ rec</td>
+                        <td>Cliente, 2</td>
+                        <td>135424</td>
+                        <td>direccion cliente 2</td>
+                        <td>Barrio 3</td>
+                        <td>Plus</td>
+                        <td>2</td>
+                        <td>
+                          <select  class="form-control">
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                          </select>
+                        </td>
+                        <td>
+                          <button class="btn btn-default aghj">OK</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <select  class="form-control">
+                            <option>Alta</option>
+                            <option>Media</option>
+                            <option>Baja</option>
+                          </select>
+                        </td>
+                        <td>S/ serv c/ rec</td>
+                        <td>Cliente, 5</td>
+                        <td>521658</td>
+                        <td>direccion cliente 5</td>
+                        <td>Barrio 8</td>
+                        <td>Plus</td>
+                        <td>2</td>
+                        <td>
+                          <select  class="form-control">
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                          </select>
+                        </td>
+                        <td>
+                          <button class="btn btn-default aghj">OK</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                           <select  class="form-control">
+                            <option>Alta</option>
+                            <option>Media</option>
+                            <option>Baja</option>
+                          </select>
+                        </td>
+                        <td>Nuevo</td>
+                        <td>Cliente, 5</td>
+                        <td>789564</td>
+                        <td>direccion cliente 5</td>
+                        <td>Barrio 8</td>
+                        <td>Premium</td>
+                        <td>3</td>
+                        <td>
+                          <select  class="form-control">
+                            <option>8</option>
+                            <option>9</option>
+                          </select>
+                        </td>
+                        <td>
+                          <button class="btn btn-default aghj">OK</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                           <select class="form-control">
+                            <option>Alta</option>
+                            <option>Media</option>
+                            <option>Baja</option>
+                          </select>
+                        </td>
+                        <td>S/ serv s/ rec</td>
+                        <td>Cliente, 10</td>
+                        <td>159753</td>
+                        <td>direccion cliente 10</td>
+                        <td>Barrio 10</td>
+                        <td>Estandar</td>
+                        <td>3</td>
+                        <td>
+                          <select  class="form-control">
+                            <option>8</option>
+                            <option>9</option>
+                          </select>
+                        </td>
+                        <td>
+                          <button class="btn btn-default aghj">OK</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <select  class="form-control">
+                            <option>Alta</option>
+                            <option>Media</option>
+                            <option>Baja</option>
+                          </select>
+                        </td>
+                        <td>S/ serv s/ rec</td>
+                        <td>Cliente, 18</td>
+                        <td>852963</td>
+                        <td>direccion cliente 18</td>
+                        <td>Barrio 18</td>
+                        <td>Plus</td>
+                        <td>4</td>
+                        <td>
+                          <select  class="form-control">
+                            <option>10</option>
+                            <option>11</option>
+                          </select>
+                        </td>
+                        <td>
+                          <button class="btn btn-default aghj">OK</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <select  class="form-control">
+                            <option>Alta</option>
+                            <option>Media</option>
+                            <option>Baja</option>
+                          </select>
+                        </td>
+                        <td>Limitado</td>
+                        <td>Cliente, 20</td>
+                        <td>258954</td>
+                        <td>direccion cliente 20</td>
+                        <td>Barrio 15</td>
+                        <td>Premium</td>
+                        <td>4</td>
+                        <td>
+                          <select  class="form-control">
+                            <option>10</option>
+                            <option>11</option>
+                          </select>
+                        </td>
+                        <td>
+                          <button class="btn btn-default aghj">OK</button>
+                        </td>
+                      </tr>
+                
+                    </tbody>
+                  </table>  
+                </div>
+            </div>
+
+            </div>
+
+          </div>
+
+          </div>
+
+
+
+        </div><!--/span-->
+
+      </div><!--/row-->
+
+    </div><!--/.container-->
+
+    </div>
+    
+    <div id="footer">
+      <div class="container">
+        <p class="text-muted text-center"><strong> &copy CableTV.</strong> Derechos reservados</p>
+      </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="jquery-1.11.0.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script> 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNBy1GS6zFVFjn-JgZmzFUH53Sl_9QtKQ
+&sensor=false&language=es"></script>
+    <script>
+      function initialize() {
+        var map_canvas = document.getElementById('map-canvas');
+        var map_options = {
+          center: new google.maps.LatLng(-27.45184,-58.98738),
+          zoom: 15,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(map_canvas, map_options);
+        var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(-27.45184,-58.98738),
+        map: map,
+        title:"Zona 1"
+        });
+        marker.setIcon("http://maps.google.com/mapfiles/ms/icons/red-dot.png");
+        marker.setMap(map);
+        var marker2 = new google.maps.Marker({
+        position: new google.maps.LatLng(-27.432156, -58.988999),
+        map: map,
+        title:"Zona 4"
+        });
+        marker2.setIcon("http://maps.google.com/mapfiles/ms/icons/blue-dot.png");
+        marker2.setMap(map);
+        var marker3 = new google.maps.Marker({
+        position: new google.maps.LatLng(-27.45500,-59.00500),
+        map: map,
+        title:"Zona 3"
+        });
+        marker3.setIcon("http://maps.google.com/mapfiles/ms/icons/green-dot.png");
+        marker3.setMap(map);
+        var marker4 = new google.maps.Marker({
+        position: new google.maps.LatLng(-27.46306,-58.99128),
+        map: map,
+        title:"Zona 2"
+        });
+        marker4.setIcon("http://maps.google.com/mapfiles/ms/icons/yellow-dot.png");
+        marker4.setMap(map);
+        var marker5 = new google.maps.Marker({
+        position: new google.maps.LatLng(-27.45500,-58.98500),
+        map: map,
+        title:"Zona 1"
+        });
+        marker5.setIcon("http://maps.google.com/mapfiles/ms/icons/red-dot.png");
+        marker5.setMap(map);
+        var marker6 = new google.maps.Marker({
+        position: new google.maps.LatLng(-27.432500, -58.988500),
+        map: map,
+        title:"Zona 4"
+        });
+        marker6.setIcon("http://maps.google.com/mapfiles/ms/icons/blue-dot.png");
+        marker6.setMap(map);
+        var marker7 = new google.maps.Marker({
+        position: new google.maps.LatLng(-27.45500,-59.00500),
+        map: map,
+        title:"Zona 3"
+        });
+        marker7.setIcon("http://maps.google.com/mapfiles/ms/icons/green-dot.png");
+        marker7.setMap(map);
+        var marker8 = new google.maps.Marker({
+        position: new google.maps.LatLng(-27.46500,-58.99500),
+        map: map,
+        title:"Zona 2"
+        });
+        marker8.setIcon("http://maps.google.com/mapfiles/ms/icons/yellow-dot.png");
+        marker8.setMap(map);
+
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    <script src="offcanvas.js"></script>
+    <script src="sistema.js"></script>
+    <script src="contrataciononline.js"></script>
+
+  </body>
+</html>

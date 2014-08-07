@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Villasanti Francisco">
+
+    <title>Sistema CableTV</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="signin.css" rel="stylesheet">
+    <link href="stickyfooter.css" rel="stylesheet">
+    <link href="dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="offcanvas.css">
+    <link rel="stylesheet" type="text/css" href="sistema.css">
+    <link rel="stylesheet" type="text/css" href="contrataciononline.css">
+
+  </head>
+
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Menu</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img style="width: 120px; height: 40px; margin-top: -7px;"
+             src="logo.png"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul id="navbarUsuario" class="nav navbar-nav navbar-right collapse">
+                
+                <li>
+                 <!-- <a id="currUser"><img id="imgUsuario" class="img-responsive" src="LogoLancaster.png"> Lancaster</a> -->
+             </li>
+                <li><a id="dologout" href="#">Salir</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+    <div  id="menu" class="container">
+        <!-- Fixed navbar -->
+
+    <div id="mainContainer" class="container">
+
+      <div class="row row-offcanvas row-offcanvas-left">
+
+        <div class="col-xs-6 col-sm-2 sidebar-offcanvas" id="sidebar" role="navigation">
+
+          <ul id="menuPpal" class="nav nav-pills nav-stacked">
+            <li class="active"><a >Home</a></li>
+            <li>
+              <a data-toggle="collapse" data-parent="#menuPpal" href="#ingresoSubmenu">
+               Reclamos <span class="caret"></span>
+               </a>
+               <div id="ingresoSubmenu" class="panel-collapse collapse in">
+                  <div class="panel-body">
+                      <ul  class="nav nav-pills nav-stacked" >
+                      <li id="mreclamos"><a href="#atencion-reclamos">Verificar Reclamos</a></li>
+                      <li id="mlistrec"><a href="#">Verificar Reclamos online</a></li>
+                      <li id="mlistarecs"><a href="#"> Lista de Reclamos</a></li>
+                      <!--<li id="mservadic" ><a href="#">Servicios Adicionales</a></li> -->
+                      </ul>
+                  </div>
+                </div>
+            </li>
+    
+          </ul>  
+
+
+        </div><!--/span-->
+       
+         <div class="col-xs-12 col-sm-10">
+
+          <p class="pull-left visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Menu</button>
+          </p>
+          <div id="arpan" class="col-xs-12 col-sm-10  panel panel-default">
+            <div class="panel-heading">
+              <h1>Atencion Reclamos</h1>
+            </div>
+            <div class="panel-body">
+              <form id="arform"  class="form-horizontal" role="form">
+
+              <div class="row">
+              <div class="form-group col-xs-6">      
+                <label for="arncli">Nro Cliente</label>
+                <div class="input-group">
+                  <input id="arncli"  class="form-control" type="number">
+                 <span class=" input-group-btn">
+                   <button id="arnclisearch" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                 </span>
+
+                   
+                 </div>
+                <!--<input id="arestcnx" class="form-control" > -->
+              </div>
+              <div class="form-group col-xs-6">      
+                <label for="ardnitit">DNI Titular</label>
+                <div class="input-group">
+                  <input id="ardnitit"  class="form-control" type="number">
+                 <span class=" input-group-btn">
+                   <button id="ardnititsearch" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                 </span>
+
+                   
+                 </div>
+                <!--<input id="arestcnx" class="form-control" > -->
+              </div>
+              </div>
+              <div class="row">
+              <div class="form-group col-xs-12">
+                 <label for="arapynom">Apellido y Nombre</label>
+                  <input id="arapynom" class="form-control" readonly>               
+              </div>
+              </div>
+              <div class="row">
+              <div class="form-group col-xs-12">
+                <label for="ardir">Direccion</label>
+                <input id="ardir" class="form-control" type="address" readonly>                
+              </div>
+              </div>
+              <div class="row">
+              <div id="fgestcta" class="form-group col-xs-6">      
+                <label for="arestcta">Estado de cuenta</label>
+                <input id="arestcta" class="form-control" placeholder="-----------" readonly>
+              </div>
+
+              <div id="fgestcnx" class="form-group col-xs-6">      
+                <label for="arestcnx">Estado de conexión</label>
+                <div class="input-group">
+
+                  <input id="arestcnx"  class="form-control" placeholder="-----------" readonly>
+                 <span class=" input-group-btn">
+                   <button id="arestcnxsearch" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                 </span>
+
+                 </div>
+              </div>
+              </div>
+              <div class="row">
+                <button id="arregrec" class="form-control col-xs-4 botform btn btn-primary btn-lg btn-block" type="submit">Registrar Reclamo</button>
+
+              </div>
+            </form>
+            </div>
+          </div>
+          <!-- panel registro reclamo -->
+          <div id="regrecpan" class="col-xs-12 panel panel-default" >
+            <div class="panel-heading">
+              <h1>Registrar un reclamo</h1>
+            </div>
+            <div class="panel-body">
+             <div id="rrpanconf" class="alert alert-info">Rellene el siguiente formulario para enviar su reclamo</div>
+              <form id="regrecform" class="form form-horizontal" role="form">
+                <div >
+                <div class="row">
+                  <div class="form-group col-xs-6">      
+                    <label for="rrncli">Nro Cliente</label>
+                  <div class="input-group">
+                    <input id="rrncli"  class="form-control" type="number">
+                   <span class=" input-group-btn">
+                     <button id="rrnclisearch" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                   </span>
+
+                     
+                   </div>
+                  <!--<input id="arestcnx" class="form-control" > -->
+                  </div>
+                  <div class="form-group col-xs-6">      
+                    <label for="rrdnitit">DNI Titular</label>
+                    <div class="input-group">
+                      <input id="rrdnitit"  class="form-control" type="number">
+                     <span class=" input-group-btn">
+                       <button id="rrdnititsearch" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                     </span>
+
+                       
+                     </div>
+                  </div>
+
+                </div>
+                <div class="row">
+                   <div class="form-group col-xs-12">
+                     <label for="rrapynom">Apellido y Nombre</label>
+                    <input id="rrapynom" class="form-control" readonly>               
+                   </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group col-xs-9">
+                   <label for="rrcalle">Calle</label>
+                   <input id="rrcalle" class="form-control" readonly>               
+                 </div>
+                 <div class="form-group col-xs-3">
+                   <label for="rraltura">Altura</label>
+                   <input id="rraltura" class="form-control" readonly>               
+                 </div>
+                </div>
+
+                <div class="row">
+                <div class="form-group col-xs-4">
+                   <label for="rrbarrio">Barrio</label>
+                   <input id="rrbarrio" class="form-control" readonly>               
+                 </div>
+                 <div class="form-group col-xs-2">
+                   <label for="rrmz">Mz</label>
+                   <input id="rrmz" class="form-control" readonly>               
+                 </div>
+                 <div class="form-group col-xs-2">
+                   <label for="rrpc">Pc</label>
+                   <input id="rrpc" class="form-control" readonly>               
+                 </div>
+                 <div class="form-group col-xs-2">
+                   <label for="rrcs">Cs</label>
+                   <input id="rrcs" class="form-control" readonly>               
+                 </div>
+                 <div class="form-group col-xs-2">
+                   <label for="rrpiso">Piso</label>
+                   <input id="rrpiso" class="form-control" readonly>               
+                 </div>
+                 <div class="form-group col-xs-2">
+                   <label for="rrdpto">Dpto</label>
+                   <input id="rrdpto" class="form-control" readonly>               
+                 </div>
+                  
+                </div>
+
+                <div class="row">
+                  <div class="form-group col-xs-5">
+                   <label for="rrloc">Localidad</label>
+                   <input id="rrloc" class="form-control" readonly>               
+                  </div>
+                  <div class="form-group col-xs-5">
+                   <label for="rrzona">Zona</label>
+                   <input id="rrzona" class="form-control" readonly>               
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group col-xs-5">
+                   <label for="rrtelf">Tel fijo</label>
+                   <input id="rrtelf" class="form-control" readonly>               
+                  </div>
+                  <div class="form-group col-xs-5">
+                   <label for="rrtelc">Celular</label>
+                   <input id="rrtelc" class="form-control" readonly>               
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group col-xs-5">
+                   <label for="rrfechrec">Fecha/Hora reclamo</label>
+                   <input id="rrfechrec" type="datetime-local" class="form-control">               
+                  </div>
+                  <div class="form-group col-xs-5">
+                   <label for="rrfechinic">Fecha/Hora problema</label>
+                   <input id="rrfechinic" type="datetime-local" class="form-control">               
+                  </div>
+
+                </div>
+
+                <div class="row">
+
+
+                <div id="rrfgcnx" class="form-group col-xs-6">      
+                  <label for="rrestcnx">Estado de conexión</label>
+                  <div class="input-group">
+                    <input id="rrestcnx"  class="form-control" readonly>
+                     <span class=" input-group-btn">
+                       <button id="rrestcnxsearch" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                    </span> 
+                  </div>
+                <!--<input id="arestcnx" class="form-control" > -->
+                </div>
+                </div>
+
+                <div class="row">
+                  <button id="arregrec" class="form-control col-xs-4 botform btn btn-primary btn-lg btn-block" type="submit">Confirmar</button>
+                </div>
+
+                </div>
+            
+              </form>  
+            </div>
+
+          </div>
+ 
+          <div id="lrpan" class="col-xs-12 panel panel-default" >
+            <div class="panel-heading">
+              <h1>Reclamos online</h1>
+            </div>
+            <div class="panel-body">
+              <div id="panConfirm" class="alert alert-info">verifique los reclamos listados</div>
+            <!-- modals 1 - 3 -->
+                <div id="modal1" class="modal fade">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">Verificación del reclamo</h4>
+                      </div>
+                      <div class="modal-body">
+
+                        <p id="msgmodal1">Verificando estado de cuenta y de conexión...aguarde</p>
+                          <img id="modloadbar1" src="loaderbar.gif">
+                          <div id="modresult1" class="row">
+                            <div class="col-xs-5 alert alert-success">Estado Cuenta al día</div>
+                            <div class="col-xs-5 alert alert-success">Conexión sin problemas</div>
+                          </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="confirmModal1()">Confirmar y enviar email</button>
+                      </div>
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+                <div id="modal2" class="modal fade">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">Verificación del reclamo</h4>
+                      </div>
+                      <div class="modal-body">
+                          <p id="msgmodal2">Verificando estado de cuenta y de conexión...aguarde</p>
+                          <img id="modloadbar2" src="loaderbar.gif">
+                          <div id="modresult2" class="row">
+                            <div class="col-xs-5 alert alert-success">Estado Cuenta al día</div>
+                            <div class="col-xs-5 alert alert-danger">Conexión con problemas</div>
+                          </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="confirmModal2()">Confirmar y enviar email</button>
+                      </div>
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+                <div id="modal3" class="modal fade">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">Verificación del reclamo</h4>
+                      </div>
+                      <div class="modal-body">
+                          <p id="msgmodal3">Verificando estado de cuenta y de conexión...aguarde</p>
+                          <img id="modloadbar3" src="loaderbar.gif">
+                          <div id="modresult3" class="row">
+                            <div class="col-xs-5 alert alert-danger">Estado Cuenta en mora</div>
+                            <div class="col-xs-5 alert alert-danger">Conexión con corte</div>
+                          </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="confirmModal3()">Confirmar y enviar email</button>
+                      </div>
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+                <!-- fin modals 1 - 3 -->
+                <div class="table-responsive paneles">
+
+                  <table id="lista" class="table table-hover table-striped table-responsive">
+                    <thead style="text-align: center">
+                      <tr>
+                        <th class="col1">ID Reclamo</th>
+                        <th class="col2">Nro Cliente</th>
+                        <th class="col3">DNI</th>
+                        <th class="col4">Nom y Ap</th>
+                        <th class="col5">Dirección</th>
+                        <th class="col6">Fecha</th>
+                        <th class="col7">Hora</th>
+                        <th class="col8">Descripción</th>
+                        <th class="col9">Verificar</th>
+                      </tr>
+                    </thead>
+                    <tbody >
+                      <tr id="fila1" class="warning">
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>Juan Perez</td>
+                        <td>Liniers 630</td>
+                        <td>10/07/2014</td>
+                        <td>18:00</td>
+                        <td>Imagen defectuosa</td>
+                        <td><button class="btn btn-default" data-toggle="modal" data-target="#modal1" onclick="actionModal1()"><span class="glyphicon glyphicon-search"></span></button></td>
+                      </tr>
+                      <tr id="fila2" class="warning">
+                        <td>2</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>Raul Benitez</td>
+                        <td>Irigoyen 302</td>
+                        <td>10/07/2014</td>
+                        <td>10:00</td>
+                        <td>Cortes intermitentes</td>
+                        <td><button class="btn btn-default" data-toggle="modal" data-target="#modal2" onclick="actionModal2()"><span class="glyphicon glyphicon-search"></span></button></td>
+                      </tr>
+                      <tr id="fila3" class="warning">
+                        <td>3</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>Carlos Juarez</td>
+                        <td>Lopez y Planes 45</td>
+                        <td>10/07/2014</td>
+                        <td>13:00</td>
+                        <td>Sin servicio</td>
+                        <td><button class="btn btn-default" data-toggle="modal" data-target="#modal3" onclick="actionModal3()"><span class="glyphicon glyphicon-search"></span></button></td>
+                      </tr>
+                
+                    </tbody>
+                  </table>  
+                </div>
+            </div>
+
+          </div>
+          <div id="panListaRecs" class="col-xs-10 panel panel-default">
+            <div class="panel-heading">
+                <h1>Lista de Reclamos</h1>
+            </div>
+            <div class="panel-body">
+            <div class="alert alert-info">Listado de los reclamos procesados en la última semana</div>
+              <div class="table-responsive paneles">
+
+                  <table id="tablarecs" class="table table-hover table-striped table-responsive">
+                    <thead style="text-align: center">
+                      <tr>
+                        <th class="col1">ID Reclamo</th>
+                        <th class="col2">Nro Cliente</th>
+                        <th class="col3">DNI</th>
+                        <th class="col4">Nom y Ap</th>
+                        <th class="col5">Dirección</th>
+                        <th class="col6">Fecha</th>
+                        <th class="col7">Hora</th>
+                        <th class="col8">Descripción</th>
+                      </tr>
+                    </thead>
+                    <tbody >
+                      <tr class="danger">
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>Juan Perez</td>
+                        <td>Liniers 630</td>
+                        <td>10/07/2014</td>
+                        <td>18:00</td>
+                        <td>Imagen defectuosa</td>
+                     
+                      </tr>
+                      <tr class="success">
+                        <td>2</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>Raul Benitez</td>
+                        <td>Irigoyen 302</td>
+                        <td>10/07/2014</td>
+                        <td>10:00</td>
+                        <td>Cortes intermitentes</td>
+                        
+                      </tr>
+                      <tr  class="success">
+                        <td>3</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>Carlos Juarez</td>
+                        <td>Lopez y Planes 45</td>
+                        <td>10/07/2014</td>
+                        <td>13:00</td>
+                        <td>Sin servicio</td>
+                        
+                      </tr>
+                
+                    </tbody>
+                  </table>  
+                </div>
+            </div>
+
+            </div>
+
+
+
+          <div id="contenido" class="col-xs-7">
+
+              <div id="homePan" class="jumbotron">
+                <h1>Sistema Administración CableTV</h1>
+                 <p>Seleccione una de las opciones del menú a la izquierda</p>
+              </div>
+
+          </div>
+
+          </div>
+
+        </div><!--/span-->
+
+      </div><!--/row-->
+
+    </div><!--/.container-->
+
+    </div>
+    
+    <div id="footer">
+      <div class="container">
+        <p class="text-muted text-center"><strong> &copy CableTV.</strong> Derechos reservados</p>
+      </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="jquery-1.11.0.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script> 
+    <script src="offcanvas.js"></script>
+    <script src="reclamos.js"></script>
+
+  </body>
+</html>
