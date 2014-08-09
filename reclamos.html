@@ -35,12 +35,12 @@
              src="logo.png"></a>
         </div>
         <div class="navbar-collapse collapse">
-          <ul id="navbarUsuario" class="nav navbar-nav navbar-right collapse">
+          <ul id="navbarUsuario" class="nav navbar-nav navbar-right">
                 
                 <li>
                  <!-- <a id="currUser"><img id="imgUsuario" class="img-responsive" src="LogoLancaster.png"> Lancaster</a> -->
              </li>
-                <li><a id="dologout" href="#">Salir</a></li>
+                <li><a id="dologout" href="loginreclamos.html">Salir</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -66,6 +66,7 @@
                       <li id="mreclamos"><a href="#atencion-reclamos">Verificar Reclamos</a></li>
                       <li id="mlistrec"><a href="#">Verificar Reclamos online</a></li>
                       <li id="mlistarecs"><a href="#"> Lista de Reclamos</a></li>
+                      <li id="mlistainfo"><a href="#"> Informe</a></li>
                       <!--<li id="mservadic" ><a href="#">Servicios Adicionales</a></li> -->
                       </ul>
                   </div>
@@ -159,6 +160,19 @@
             </div>
             <div class="panel-body">
              <div id="rrpanconf" class="alert alert-info">Rellene el siguiente formulario para enviar su reclamo</div>
+              <div class="row">
+                <div class="form-group col-xs-12">
+                
+                <div id="rrtipoatencion" class="btn-group .btn-group.btn-group-justified" data-toggle="buttons">
+                  <label id="rrtaap" class="btn btn-default">
+                    <input  type="radio" name="options"> Atención Personal
+                  </label>
+                  <label id="rrtaat"  class="btn btn-default">
+                    <input  type="radio" name="options"> Atención Telefonica
+                  </label>
+                </div>
+                </div>              
+              </div>
               <form id="regrecform" class="form form-horizontal" role="form">
                 <div >
                 <div class="row">
@@ -430,7 +444,29 @@
                 <h1>Lista de Reclamos</h1>
             </div>
             <div class="panel-body">
+            <div class="row">
+              <div class="col-xs-12 panel panel-default">
+                <div class="panel-body">
+
+                  <label><input type="checkbox">Filtrar por período</label>
+                  <form id="lrfilter" class="form-inline" role="form">
+                    <div class="form-group">
+                      <label for="fdesde">Desde</label>
+                      <input class="form-control" type="date">
+                    </div>
+                    <div class="form-group">
+                      <label for="fhasta">Hasta</label>
+                      <input class="form-control" type="date">
+                    </div>
+                    <button class="btn btn-primary" type="submit">Confirmar</button>
+                  </form>
+
+                </div>
+              </div>
+              
+            </div>
             <div class="alert alert-info">Listado de los reclamos procesados en la última semana</div>
+            <button class="btn btn-default"><span class="glyphicon glyphicon-print"></span>Imprimir</button> 
               <div class="table-responsive paneles">
 
                   <table id="tablarecs" class="table table-hover table-striped table-responsive">
@@ -488,7 +524,33 @@
 
             </div>
 
+          <div id="paninforeclamos" class="col-xs-12 panel panel-default">
+            <div class="panel-heading">
+              <h1>Reclamos realizados</h1>
+            </div>
+            <div class="panel-body">
+              <div class="row">
 
+                  <div class="alert alert-info">Seleccione el período</div>
+                  
+                  <form id="filtroreclamos" class="form-inline" role="form">
+                    <div class="form-group">
+                      <label for="fdesde">Desde</label>
+                      <input class="form-control" type="date">
+                    </div>
+                    <div class="form-group">
+                      <label for="fhasta">Hasta</label>
+                      <input class="form-control" type="date">
+                    </div>
+                    <button class="btn btn-primary" type="submit">Confirmar</button>
+                  </form>
+              
+              </div>
+              <div class="row">
+                <iframe id="visor" class="col-xs-12" src="Viewer.js/#../"></iframe>
+              </div>
+            </div>
+          </div>
 
           <div id="contenido" class="col-xs-7">
 
@@ -523,6 +585,5 @@
     <script src="bootstrap/js/bootstrap.min.js"></script> 
     <script src="offcanvas.js"></script>
     <script src="reclamos.js"></script>
-
   </body>
 </html>

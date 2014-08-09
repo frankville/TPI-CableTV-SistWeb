@@ -161,7 +161,13 @@ canvas {
 }
 
 #visor {
-  display: none;
+  margin-top: 20px;
   width: 100%;
-  height: 100%;
+  height: 400px;
+}
+
+#atinfovisor {
+  margin-top: 20px;
+  width: 100%;
+  height: 400px;
 }

@@ -20,6 +20,15 @@ $(document).ready(function(){
 		hideAllPanels();
 		$("#panListaRecs").fadeIn("fast");
 	});
+	$("#mlistainfo").click(function(event){
+		event.preventDefault();
+		hideAllPanels();
+		$("#paninforeclamos").fadeIn("fast");
+	});
+	$("#filtroreclamos").submit(function(event){
+		event.preventDefault();
+		$("#visor").attr("src","Viewer.js/#../reclamos.pdf");
+	});
 	$("#arform").submit(function(event){
 		event.preventDefault();
 	});
@@ -89,6 +98,26 @@ $(document).ready(function(){
 		mostrarRegRecMsgExito();
 	});
 
+	$("#lrfilter").submit(function(event){
+		
+		event.preventDefault();
+		
+	});
+		$("#rrtaap").click(function(event){
+
+		event.preventDefault();
+		$("#rrtaap").addClass("btn-success");
+		$("#rrtaat").removeClass("btn-success");
+
+	});
+		$("#rrtaat").click(function(event){
+		
+		event.preventDefault();
+		$("#rrtaat").addClass("btn-success");
+		$("#rrtaap").removeClass("btn-success");
+
+	});
+	
 });
 
 function atencionRecPorNroCliente() {
@@ -169,6 +198,7 @@ function hideAllPanels(){
 	$("#athrpan").fadeOut("fast");
 	$("#atreghrpan").fadeOut("fast");
 	$("#atreghrpan").fadeOut("fast");
+	$("#paninforeclamos").fadeOut("fast");
 
 };
 

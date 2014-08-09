@@ -35,12 +35,12 @@
              src="logo.png"></a>
         </div>
         <div class="navbar-collapse collapse">
-          <ul id="navbarUsuario" class="nav navbar-nav navbar-right collapse">
+          <ul id="navbarUsuario" class="nav navbar-nav navbar-right">
                 
                 <li>
                  <!-- <a id="currUser"><img id="imgUsuario" class="img-responsive" src="LogoLancaster.png"> Lancaster</a> -->
              </li>
-                <li><a id="dologout" href="#">Salir</a></li>
+                <li><a id="dologout" href="logintecnica.html">Salir</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -71,6 +71,7 @@
                       <li id="atmap"><a href="#"> Mapa</a></li>
                       <li id="atreghr"><a href="#">Nuevas Hojas de ruta</a></li>
                       <li id="athojaruta"><a href="#"> Listado Hojas de Ruta</a></li>
+                      <li id="atinfoarreglos"><a href="#"> Informe</a></li>
                       <!--<li id="mservadic" ><a href="#">Servicios Adicionales</a></li> -->
                       </ul>
                   </div>
@@ -372,7 +373,11 @@
             <div class="panel-heading">
               <h1>Hojas de Ruta</h1>
             </div>
-            <div class="panel-body col-xs-12">           
+            <div class="panel-body col-xs-12">
+              <div class="row">
+                <button class="btn btn-default col-xs 5"><span class="glyphicon glyphicon-refresh"></span> Actualizar Hojas de ruta</button>
+                <button class="btn btn-default col-xs 5"><span class="glyphicon glyphicon-print"></span> Imprimir Hojas de ruta</button>
+              </div>           
             <div class="row">
                 <div class="table-responsive paneles">
 
@@ -387,6 +392,7 @@
                         <th style="text-align: center; width: 30px;">Barrio</th>
                         <th style="text-align: center; width: 30px;">Serv. Contratado</th>
                         <th style="text-align: center; width: 30px;" >Zona</th>
+                        <th style="text-align: center; width: 30px;" >Localidad</th>
                         <th style="text-align: center; width: 30px;">Equipo</th>
                         <th style="text-align: center; width: 30px;">Editar</th>
                       </tr>
@@ -401,6 +407,7 @@
                         <td>Barrio 2</td>
                         <td>Estandar</td>
                         <td>1</td>
+                        <td>Resistencia</td>
                         <td>1</td>
                         <td>
                           <button class="btn btn-default">
@@ -417,6 +424,7 @@
                         <td>Barrio 3</td>
                         <td>Plus</td>
                         <td>2</td>
+                        <td>Tirol</td>
                         <td>6</td>
                         <td>
                           <button class="btn btn-default">
@@ -433,6 +441,7 @@
                         <td>Barrio 8</td>
                         <td>Plus</td>
                         <td>2</td>
+                        <td>Fontana</td>
                         <td>7</td>
                         <td>
                           <button class="btn btn-default">
@@ -449,6 +458,7 @@
                         <td>Barrio 8</td>
                         <td>Premium</td>
                         <td>3</td>
+                        <td>Margarita Belén</td>
                         <td>8</td>
                         <td>
                           <button class="btn btn-default">
@@ -465,6 +475,7 @@
                         <td>Barrio 10</td>
                         <td>Estandar</td>
                         <td>3</td>
+                        <td>Colonia Benítez</td>
                         <td>9</td>
                         <td>
                           <button class="btn btn-default">
@@ -481,6 +492,7 @@
                         <td>Barrio 18</td>
                         <td>Plus</td>
                         <td>4</td>
+                        <td>Cote Lai</td>
                         <td>10</td>
                         <td>
                           <button class="btn btn-default">
@@ -497,6 +509,7 @@
                         <td>Barrio 15</td>
                         <td>Premium</td>
                         <td>4</td>
+                        <td>Charadai</td>
                         <td>11</td>
                         <td>
                           <button class="btn btn-default">
@@ -510,10 +523,7 @@
                 </div>
             </div>
 
-            <div class="row">
-            <button class="btn btn-primary col-xs 5">Actualizar Hojas de ruta</button>
 
-            </div>
             </div>
 
           </div>
@@ -524,6 +534,9 @@
             <div class="panel-body">
             <div id="atreghrpaninfo" class="alert alert-info">determine la prioridad y el equipo de trabajo y agregue a la lista de hojas de ruta</div>
             <div class="row">
+              <div class="row">
+                <button class="btn btn-default col-xs 5"><span class="glyphicon glyphicon-refresh"></span> Actualizar Hojas de ruta</button>
+              </div>
                 <div class="table-responsive paneles">
 
                   <table id="lista" class="table table-stripped ">
@@ -537,6 +550,7 @@
                         <th style="text-align: center; width: 30px;">Barrio</th>
                         <th style="text-align: center; width: 30px;">Serv. Contratado</th>
                         <th style="text-align: center; width: 30px;" >Zona</th>
+                        <th style="text-align: center; width: 30px;" >Localidad</th>
                         <th style="text-align: center; width: 30px;">Equipo</th>
                         <th style="text-align: center; width: 30px;">Agregar</th>
                       </tr>
@@ -557,6 +571,7 @@
                         <td>Barrio 2</td>
                         <td>Estandar</td>
                         <td>1</td>
+                        <td>Resistencia</td>
                         <td>
                           <select  class="form-control">
                             <option>1</option>
@@ -584,6 +599,7 @@
                         <td>Barrio 3</td>
                         <td>Plus</td>
                         <td>2</td>
+                        <td>Fontana</td>
                         <td>
                           <select  class="form-control">
                             <option>5</option>
@@ -610,6 +626,7 @@
                         <td>Barrio 8</td>
                         <td>Plus</td>
                         <td>2</td>
+                        <td>Tirol</td>
                         <td>
                           <select  class="form-control">
                             <option>5</option>
@@ -636,6 +653,7 @@
                         <td>Barrio 8</td>
                         <td>Premium</td>
                         <td>3</td>
+                        <td>Margarita Belén</td>
                         <td>
                           <select  class="form-control">
                             <option>8</option>
@@ -661,6 +679,7 @@
                         <td>Barrio 10</td>
                         <td>Estandar</td>
                         <td>3</td>
+                        <td>Margarita Belén</td>
                         <td>
                           <select  class="form-control">
                             <option>8</option>
@@ -686,6 +705,7 @@
                         <td>Barrio 18</td>
                         <td>Plus</td>
                         <td>4</td>
+                        <td>Cote Lai</td>
                         <td>
                           <select  class="form-control">
                             <option>10</option>
@@ -711,6 +731,7 @@
                         <td>Barrio 15</td>
                         <td>Premium</td>
                         <td>4</td>
+                        <td>Charadai</td>
                         <td>
                           <select  class="form-control">
                             <option>10</option>
@@ -731,6 +752,28 @@
 
           </div>
 
+          <div id="paninfoarreglos" class="col-xs-12 panel panel-default">
+            <div class="panel-heading">
+              <h1>Reparaciones realizadas</h1>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+
+                  <div class="alert alert-info">Seleccione la semana</div>
+                  <form id="atinfofilter" class="form-inline" role="form">
+                    <div class="form-group">
+                      <label for="semana">Semana </label>
+                      <input id="semana" class="form-control" type="week">
+                    </div>
+                    <button class="btn btn-primary" type="submit">Confirmar</button>
+                  </form>
+              
+              </div>
+              <div class="row">
+                <iframe id="atinfovisor" class="col-xs-12" src="Viewer.js/#../"></iframe>
+              </div>
+            </div>
+          </div>
           </div>
 
 
@@ -827,7 +870,7 @@
       google.maps.event.addDomListener(window, 'load', initialize);
     </script>
     <script src="offcanvas.js"></script>
-    <script src="sistema.js"></script>
+    <script src="tecnica.js"></script>
     <script src="contrataciononline.js"></script>
 
   </body>

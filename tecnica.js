@@ -43,6 +43,12 @@ $(document).ready(function(){
 			atencionRecPorNroCliente();
 
 	});
+	$("#atinfoarreglos").click(function(event){
+		event.preventDefault();		
+		hideAllPanels();	
+		$("#paninfoarreglos").fadeIn("fast");
+
+	});
 
 	//busqueda por dni cliente en At Recl
 	$("#ardnitit").keyup(function(event){
@@ -188,6 +194,10 @@ $(document).ready(function(){
 			$("#atcoinfo").text("Confirme la fecha de instalacion y agregue a las hojas de ruta");
 		},5000);
 	});
+	$("#atinfofilter").submit(function(event){
+		event.preventDefault();
+		$("#atinfovisor").attr("src","http://localhost/TPI-CableTV-SistWeb/Viewer.js/#../reparaciones.pdf");
+	});
 });
 
 function atencionRecPorNroCliente() {
@@ -269,6 +279,7 @@ function hideAllPanels(){
 	$("#athrpan").fadeOut("fast");
 	$("#atreghrpan").fadeOut("fast");
 	$("#atreghrpan").fadeOut("fast");
+	$("#paninfoarreglos").fadeOut("fast");
 
 };
 

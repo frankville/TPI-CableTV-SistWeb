@@ -188,6 +188,13 @@ $(document).ready(function(){
 			$("#atcoinfo").text("Confirme la fecha de instalacion y agregue a las hojas de ruta");
 		},5000);
 	});
+	$("#lrfilter").submit(function(event){
+		
+		event.preventDefault();
+		mostrarRegRecMsgExito();
+	});
+
+
 });
 
 function atencionRecPorNroCliente() {
